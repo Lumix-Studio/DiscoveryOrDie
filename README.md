@@ -72,21 +72,6 @@ Sua verdadeira origem ainda permanece desconhecida.
 
 ---
 
-# 🎮 Principais Mecânicas
-
-* Sistema de investigação
-* Sistema de pistas
-* Coleta de evidências
-* Diálogos dinâmicos
-* Exploração
-* Quebra-cabeças
-* Progressão narrativa
-* Eventos de terror
-* Documentos secretos
-* Escolhas do jogador
-
----
-
 # 📌 Organização do Projeto
 
 Cada sistema deverá possuir sua própria documentação.
@@ -101,18 +86,6 @@ Sempre que possível:
 
 ---
 
-# 🚧 Desenvolvimento
-
-Atualmente estamos trabalhando em:
-
-* História
-* Gameplay
-* Interface
-* Áudio
-* Animações
-
----
-
 # 🤝 Contribuindo
 
 Antes de iniciar qualquer tarefa:
@@ -124,14 +97,3 @@ Antes de iniciar qualquer tarefa:
 
 ---
 
-# 📄 Licença
-
-Este projeto pertence à **Lumix Studio**.
-
-A história, personagens, universo, documentos e demais conteúdos são protegidos por seus respectivos direitos autorais.
-
----
-
-## Bem-vindo à investigação.
-
-> **"Nem toda verdade quer ser descoberta."**
