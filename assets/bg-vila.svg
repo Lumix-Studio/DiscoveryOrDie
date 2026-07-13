@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#060910"/>
+      <stop offset="55%" stop-color="#101a2c"/>
+      <stop offset="100%" stop-color="#1c2a44"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1b2417"/>
+      <stop offset="100%" stop-color="#0c100a"/>
+    </linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a3524"/>
+      <stop offset="100%" stop-color="#2e2015"/>
+    </linearGradient>
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#eef3ff" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#eef3ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="warmGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffdf8c" stop-opacity=".9"/>
+      <stop offset="40%" stop-color="#f2c766" stop-opacity=".45"/>
+      <stop offset="100%" stop-color="#f2c766" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="flame" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#d4a843"/>
+      <stop offset="60%" stop-color="#f2c766"/>
+      <stop offset="100%" stop-color="#ffe9b0"/>
+    </linearGradient>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+
+  <!-- estrelas -->
+  <g fill="#e8eefc">
+    <circle cx="120" cy="90" r="1.6" opacity=".8"/>
+    <circle cx="260" cy="160" r="1.2" opacity=".6"/>
+    <circle cx="410" cy="70" r="1.8" opacity=".7"/>
+    <circle cx="560" cy="130" r="1.3" opacity=".5"/>
+    <circle cx="700" cy="60" r="1.5" opacity=".8"/>
+    <circle cx="860" cy="150" r="1.2" opacity=".55"/>
+    <circle cx="990" cy="90" r="1.7" opacity=".7"/>
+    <circle cx="1140" cy="50" r="1.3" opacity=".6"/>
+    <circle cx="1300" cy="120" r="1.5" opacity=".7"/>
+    <circle cx="1460" cy="80" r="1.2" opacity=".5"/>
+    <circle cx="60" cy="220" r="1.1" opacity=".5"/>
+    <circle cx="330" cy="230" r="1.1" opacity=".45"/>
+    <circle cx="1750" cy="140" r="1.6" opacity=".7"/>
+    <circle cx="1830" cy="240" r="1.2" opacity=".5"/>
+  </g>
+
+  <!-- lua -->
+  <circle cx="1620" cy="190" r="150" fill="url(#moonGlow)"/>
+  <circle cx="1620" cy="190" r="52" fill="#eef3ff" opacity=".92"/>
+  <circle cx="1600" cy="175" r="10" fill="#d9e2f5" opacity=".5"/>
+  <circle cx="1638" cy="205" r="6" fill="#d9e2f5" opacity=".4"/>
+
+  <!-- linha de árvores distante -->
+  <path d="M0,660 L60,610 L130,650 L200,600 L270,645 L340,595 L410,640 L480,605 L560,650
+           L630,600 L700,645 L780,595 L850,635 L930,600 L1000,650 L1080,605 L1160,645
+           L1230,600 L1310,640 L1390,600 L1460,650 L1540,605 L1620,645 L1700,600
+           L1780,640 L1860,610 L1920,650 L1920,750 L0,750 Z" fill="#0d1a17"/>
+
+  <!-- árvores de moldura (mais próximas) -->
+  <g fill="#0a1512">
+    <path d="M60,780 L150,780 L145,560 L120,500 L95,560 L90,780 Z"/>
+    <path d="M-20,820 L110,820 L100,540 L70,460 L40,540 L-30,820 Z"/>
+    <path d="M1780,790 L1900,790 L1890,540 L1860,470 L1830,540 L1770,790 Z"/>
+    <path d="M1860,830 L1960,830 L1945,560 L1915,490 L1885,560 L1855,830 Z"/>
+  </g>
+
+  <!-- terreno -->
+  <path d="M0,750 Q480,700 960,730 T1920,745 L1920,1080 L0,1080 Z" fill="url(#ground)"/>
+
+  <!-- trilha de terra até a vila -->
+  <path d="M860,1080 L1000,1080 L940,760 L900,760 Z" fill="#3a2c1e" opacity=".85"/>
+  <path d="M885,1080 L975,1080 L935,770 L915,770 Z" fill="#4a3a26" opacity=".55"/>
+
+  <!-- cerca baixa -->
+  <g stroke="#1c150e" stroke-width="6" opacity=".8">
+    <line x1="140" y1="980" x2="140" y2="900"/>
+    <line x1="220" y1="985" x2="220" y2="905"/>
+    <line x1="300" y1="990" x2="300" y2="910"/>
+    <line x1="140" y1="925" x2="300" y2="935"/>
+    <line x1="1620" y1="980" x2="1620" y2="900"/>
+    <line x1="1700" y1="985" x2="1700" y2="905"/>
+    <line x1="1780" y1="990" x2="1780" y2="910"/>
+    <line x1="1620" y1="925" x2="1780" y2="935"/>
+  </g>
+
+  <!-- cabana 1 (esquerda) -->
+  <g>
+    <rect x="330" y="700" width="230" height="180" fill="url(#wood)"/>
+    <polygon points="310,700 580,700 445,590" fill="#241a12"/>
+    <rect x="400" y="790" width="70" height="90" fill="#1c130c"/>
+    <circle cx="890" cy="820" r="60" fill="url(#warmGlow)" filter="url(#soft)"/>
+    <rect x="500" y="740" width="46" height="46" fill="#ffdf8c" opacity=".85"/>
+    <rect x="500" y="740" width="46" height="46" fill="none" stroke="#241a12" stroke-width="4"/>
+  </g>
+
+  <!-- cabana 2 (centro, maior — casa de Estevan) -->
+  <g>
+    <rect x="800" y="640" width="320" height="240" fill="url(#wood)"/>
+    <polygon points="770,640 1150,640 960,500" fill="#2a1e14"/>
+    <rect x="900" y="760" width="90" height="120" fill="#180f09"/>
+    <rect x="1030" y="700" width="56" height="56" fill="#ffe9b0" opacity=".9"/>
+    <rect x="1030" y="700" width="56" height="56" fill="none" stroke="#241a12" stroke-width="4"/>
+    <rect x="850" y="700" width="56" height="56" fill="#ffe9b0" opacity=".9"/>
+    <rect x="850" y="700" width="56" height="56" fill="none" stroke="#241a12" stroke-width="4"/>
+    <rect x="955" y="480" width="14" height="60" fill="#1c130c"/>
+  </g>
+
+  <!-- cabana 3 (direita) -->
+  <g>
+    <rect x="1250" y="720" width="200" height="160" fill="url(#wood)"/>
+    <polygon points="1230,720 1470,720 1350,620" fill="#241a12"/>
+    <rect x="1310" y="800" width="64" height="80" fill="#1c130c"/>
+    <rect x="1390" y="755" width="42" height="42" fill="#ffdf8c" opacity=".8"/>
+  </g>
+
+  <!-- tochas -->
+  <g>
+    <rect x="240" y="820" width="12" height="140" fill="#241a12"/>
+    <circle cx="246" cy="800" r="70" fill="url(#warmGlow)" filter="url(#soft)"/>
+    <path d="M246,760 C230,790 235,810 246,822 C257,810 262,790 246,760 Z" fill="url(#flame)"/>
+
+    <rect x="1560" y="810" width="12" height="140" fill="#241a12"/>
+    <circle cx="1566" cy="790" r="70" fill="url(#warmGlow)" filter="url(#soft)"/>
+    <path d="M1566,750 C1550,780 1555,800 1566,812 C1577,800 1582,780 1566,750 Z" fill="url(#flame)"/>
+  </g>
+
+  <!-- neblina rasteira -->
+  <ellipse cx="500" cy="960" rx="360" ry="34" fill="#dfe8ff" opacity=".05"/>
+  <ellipse cx="1300" cy="990" rx="420" ry="38" fill="#dfe8ff" opacity=".05"/>
+</svg>

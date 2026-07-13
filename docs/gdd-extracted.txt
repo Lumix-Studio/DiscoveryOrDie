@@ -1,0 +1,66 @@
+Discovery or Die (DoD) — GDD
+===========ENREDO===========
+Discovery or Die é um jogo estilo visual novel de detetive o personagem principal no caso o personagem que o jogador joga se chama Bohr Holmes um detetive particular famoso na cidade sede da polícia civil esse caso do primeiro capítulo se passa em uma floresta e aparecera 8 personagens 
+
+	•	Bohr Homes (Personagem principal)
+	•	Jhon Poly (Amigo de Bohr)
+	•	Estevan (Chefe da Vila)
+	•	Lorain (Garota sequestrada)
+Esse capítulo será demonstrativo e o capítulo inicial do jogo que se passará em uma floresta em que você e o NPC que te acompanhará Jhon Poly terão que resolver o caso por enquanto vamos focar nos sistemas iniciais pois o jogo terá que ter várias rotas (formas de ganhar e formas de perder) vamos focar nos sistemas principais que farão o jogo funcionar e ter uma aparência boa o suficiente para o público.
+
+
+
+
+
+
+==========AFAZERES==========
+
+BRUNELLI === PROGRAMADOR 1
+
+Você será responsável por cuidar dos sistemas de minigames que irão ter no jogo como parte da investigação como análise de fotos, sistemas de pesquisas, TASKs, Interface.
+
+o que será feito: Interface Funcional enquanto eu termino as UIs 
+
+Irei fazer uma lista de TASKs e sobre o sistema de pesquisa e minigames!!!
+
+
+
+DUVIDA SÓ PERGUNTAR QUE ESTAREI EXPLICANDO
+
+
+
+
+
+
+
+
+
+
+
+==========AFAZERES==========
+
+DARLYSON === PROGRAMADOR 2
+Será responsável pelo sistema  de diálogos, troca de personagens, ambientação do jogo, sistema de resposta e de leitura dentro do jogo.
+
+
+QUAISQUER DUVIDA PERGUNTAR QUE RESPONDO !!!
+
+
+
+
+
+
+
+
+
+
+
+	
+VEILCRUS === PROGRAMADOR 2
+
+
+
+
+
+AUXILIARÁ OS 
+PROGRAMADORES   1 E 2 !!!!!!!!!!!!!!!!!!!!!

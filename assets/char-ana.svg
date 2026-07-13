@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 900">
+  <defs>
+    <linearGradient id="anaSkirt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3c5648"/>
+      <stop offset="100%" stop-color="#233830"/>
+    </linearGradient>
+    <linearGradient id="anaShawl" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8a6a4a"/>
+      <stop offset="100%" stop-color="#6a4c32"/>
+    </linearGradient>
+    <linearGradient id="anaSkin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#caa07a"/>
+      <stop offset="100%" stop-color="#b4885f"/>
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="250" cy="878" rx="90" ry="16" fill="#000" opacity=".35"/>
+
+  <!-- saia longa -->
+  <path d="M172,470 C150,560 130,690 118,830 L382,830 C370,690 350,560 328,470 Z" fill="url(#anaSkirt)"/>
+  <path d="M200,480 L186,830" stroke="#1c2e26" stroke-width="4" opacity=".5"/>
+  <path d="M250,470 L246,830" stroke="#1c2e26" stroke-width="4" opacity=".5"/>
+  <path d="M300,480 L314,830" stroke="#1c2e26" stroke-width="4" opacity=".5"/>
+  <!-- pés/sapatos -->
+  <path d="M182,822 L220,822 L222,846 L176,846 Z" fill="#141810"/>
+  <path d="M280,822 L318,822 L324,846 L278,846 Z" fill="#141810"/>
+
+  <!-- blusa/torso -->
+  <path d="M186,260 C170,300 164,370 168,470 L332,470 C336,370 330,300 314,260
+           C294,232 270,220 250,220 C230,220 206,232 186,260 Z" fill="#8f9a7c"/>
+
+  <!-- braços -->
+  <path d="M168,300 C150,350 146,410 158,460 L192,450 C182,405 184,355 192,300 Z" fill="#7e8a6c"/>
+  <path d="M332,300 C350,350 354,410 342,460 L308,450 C318,405 316,355 308,300 Z" fill="#8f9a7c"/>
+  <ellipse cx="170" cy="464" rx="15" ry="13" fill="url(#anaSkin)"/>
+
+  <!-- cesta -->
+  <g transform="translate(352,468)">
+    <path d="M-34,-6 C-34,-24 34,-24 34,-6 L28,30 L-28,30 Z" fill="#7a5a34"/>
+    <path d="M-30,-6 L30,-6" stroke="#5c4020" stroke-width="4"/>
+    <path d="M-18,-6 L-18,26" stroke="#5c4020" stroke-width="3"/>
+    <path d="M0,-6 L0,26" stroke="#5c4020" stroke-width="3"/>
+    <path d="M18,-6 L18,26" stroke="#5c4020" stroke-width="3"/>
+    <path d="M-20,-8 Q0,-34 20,-8" stroke="#5c4020" stroke-width="6" fill="none"/>
+    <circle cx="-6" cy="-14" r="10" fill="#a23c2e"/>
+    <circle cx="8" cy="-10" r="9" fill="#c46a30"/>
+  </g>
+  <ellipse cx="342" cy="462" rx="15" ry="13" fill="url(#anaSkin)"/>
+
+  <!-- xale sobre os ombros -->
+  <path d="M180,238 C210,270 290,270 320,238 L336,340 C280,368 220,368 164,340 Z" fill="url(#anaShawl)"/>
+  <path d="M164,340 L336,340 L326,360 L174,360 Z" fill="#5c4230" opacity=".7"/>
+
+  <!-- pescoço -->
+  <rect x="232" y="200" width="36" height="34" fill="url(#anaSkin)"/>
+
+  <!-- cabeça -->
+  <ellipse cx="250" cy="164" rx="56" ry="60" fill="url(#anaSkin)"/>
+  <ellipse cx="198" cy="168" rx="8" ry="12" fill="#b4885f"/>
+  <ellipse cx="302" cy="168" rx="8" ry="12" fill="#b4885f"/>
+
+  <!-- lenço na cabeça -->
+  <path d="M194,150 C194,108 218,80 250,80 C282,80 306,108 306,150
+           C306,124 284,104 250,104 C216,104 194,124 194,150 Z" fill="#5c7a68"/>
+  <path d="M198,140 C198,168 180,200 168,220 L192,224 C206,198 210,168 210,140 Z" fill="#4a6656"/>
+  <path d="M302,140 C302,168 320,200 332,220 L308,224 C294,198 290,168 290,140 Z" fill="#4a6656"/>
+
+  <!-- sobrancelhas desconfiadas -->
+  <path d="M214,148 L238,152" stroke="#5a3d24" stroke-width="5" stroke-linecap="round"/>
+  <path d="M286,148 L262,152" stroke="#5a3d24" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="223" cy="164" r="5" fill="#241a10"/>
+  <circle cx="277" cy="164" r="5" fill="#241a10"/>
+  <path d="M250,158 L245,184 L257,184 Z" fill="#b4885f"/>
+  <path d="M232,204 Q250,198 268,204" stroke="#6a4028" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>

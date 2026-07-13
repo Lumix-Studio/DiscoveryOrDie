@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 900">
+  <defs>
+    <linearGradient id="estCoat" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5c3f2a"/>
+      <stop offset="55%" stop-color="#46301e"/>
+      <stop offset="100%" stop-color="#332314"/>
+    </linearGradient>
+    <linearGradient id="estVest" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7a4f30"/>
+      <stop offset="100%" stop-color="#5c3a22"/>
+    </linearGradient>
+    <linearGradient id="estSkin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cf9d78"/>
+      <stop offset="100%" stop-color="#b78561"/>
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="252" cy="878" rx="96" ry="16" fill="#000" opacity=".35"/>
+
+  <!-- pernas -->
+  <path d="M206,610 L198,838 L172,838 L184,610 Z" fill="#2c2015"/>
+  <path d="M296,610 L316,838 L290,838 L282,610 Z" fill="#241a10"/>
+  <path d="M166,838 L206,838 L212,862 L158,862 Z" fill="#12100c"/>
+  <path d="M282,838 L322,838 L328,862 L274,862 Z" fill="#12100c"/>
+
+  <!-- casaco longo aberto -->
+  <path d="M158,235 C136,270 122,340 126,430 L110,745 L200,745 L206,300 Z" fill="url(#estCoat)"/>
+  <path d="M342,235 C364,270 378,340 374,430 L390,745 L300,745 L294,300 Z" fill="url(#estCoat)"/>
+
+  <!-- colete por baixo -->
+  <path d="M206,250 C220,230 280,230 294,250 L300,700 L200,700 Z" fill="url(#estVest)"/>
+  <!-- botões do colete -->
+  <circle cx="250" cy="330" r="6" fill="#2a1c10"/>
+  <circle cx="250" cy="400" r="6" fill="#2a1c10"/>
+  <circle cx="250" cy="470" r="6" fill="#2a1c10"/>
+  <circle cx="250" cy="540" r="6" fill="#2a1c10"/>
+
+  <!-- corrente/medalhão de chefe -->
+  <path d="M212,258 Q250,300 288,258" stroke="#d4a843" stroke-width="6" fill="none"/>
+  <circle cx="250" cy="304" r="16" fill="#d4a843"/>
+  <circle cx="250" cy="304" r="8" fill="#8a6a26"/>
+
+  <!-- camisa/gola -->
+  <path d="M224,242 L250,285 L276,242 L262,222 L238,222 Z" fill="#cbb98f"/>
+
+  <!-- braços -->
+  <path d="M126,320 C104,380 100,450 116,520 L156,505 C146,450 148,390 158,320 Z" fill="#46301e"/>
+  <path d="M374,320 C396,380 400,450 384,520 L344,505 C354,450 352,390 342,320 Z" fill="#332314"/>
+  <ellipse cx="130" cy="524" rx="16" ry="13" fill="url(#estSkin)"/>
+
+  <!-- bengala -->
+  <path d="M366,520 L386,860" stroke="#3a2716" stroke-width="10" stroke-linecap="round"/>
+  <path d="M362,516 Q386,500 402,516" stroke="#3a2716" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <ellipse cx="374" cy="524" rx="16" ry="13" fill="url(#estSkin)"/>
+
+  <!-- pescoço -->
+  <rect x="230" y="176" width="42" height="42" fill="url(#estSkin)"/>
+
+  <!-- cabeça -->
+  <ellipse cx="250" cy="136" rx="60" ry="64" fill="url(#estSkin)"/>
+  <ellipse cx="193" cy="140" rx="9" ry="13" fill="#b78561"/>
+  <ellipse cx="307" cy="140" rx="9" ry="13" fill="#b78561"/>
+
+  <!-- cabelo grisalho ralo -->
+  <path d="M196,110 C200,72 222,50 250,50 C278,50 300,72 304,110
+           C292,92 272,82 250,82 C228,82 208,92 196,110 Z" fill="#c9c4bb"/>
+
+  <!-- sobrancelhas tensas -->
+  <path d="M212,120 L240,126" stroke="#b8b3a8" stroke-width="6" stroke-linecap="round"/>
+  <path d="M288,120 L260,126" stroke="#b8b3a8" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="223" cy="138" r="5" fill="#241a10"/>
+  <circle cx="277" cy="138" r="5" fill="#241a10"/>
+  <path d="M250,132 L245,160 L257,160 Z" fill="#b78561"/>
+
+  <!-- barba grisalha -->
+  <path d="M198,150 C198,190 220,214 250,214 C280,214 302,190 302,150
+           C302,178 282,196 250,196 C218,196 198,178 198,150 Z" fill="#d6d2c8"/>
+  <path d="M226,168 Q250,182 274,168" stroke="#8a8378" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>

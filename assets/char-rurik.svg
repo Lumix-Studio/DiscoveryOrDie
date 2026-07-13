@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 900">
+  <defs>
+    <linearGradient id="rurikCoat" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3a3028"/>
+      <stop offset="55%" stop-color="#2a2219"/>
+      <stop offset="100%" stop-color="#1c160f"/>
+    </linearGradient>
+    <linearGradient id="rurikFur" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8a7a5c"/>
+      <stop offset="100%" stop-color="#6a5c42"/>
+    </linearGradient>
+    <linearGradient id="rurikSkin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c08a63"/>
+      <stop offset="100%" stop-color="#a3714c"/>
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="252" cy="876" rx="106" ry="17" fill="#000" opacity=".4"/>
+
+  <!-- pernas robustas -->
+  <path d="M198,600 L186,836 L152,836 L172,600 Z" fill="#241d14"/>
+  <path d="M304,600 L330,836 L296,836 L286,600 Z" fill="#1a150e"/>
+  <path d="M144,836 L190,836 L198,864 L134,864 Z" fill="#100c08"/>
+  <path d="M290,836 L336,836 L344,864 L280,864 Z" fill="#100c08"/>
+
+  <!-- casaco de pele, corpo largo -->
+  <path d="M148,250 C122,286 106,360 112,450 L94,740 L406,740 L388,450
+           C394,360 378,286 352,250 C322,216 288,202 250,202 C212,202 178,216 148,250 Z"
+        fill="url(#rurikCoat)"/>
+  <!-- fenda/cinto -->
+  <rect x="150" y="460" width="200" height="22" fill="#151009"/>
+  <!-- bainha da faca -->
+  <path d="M312,462 L332,462 L336,530 L308,530 Z" fill="#4a3018"/>
+  <path d="M316,466 L328,466 L330,520 L314,520 Z" fill="#c9c2b4"/>
+  <circle cx="322" cy="470" r="6" fill="#8a6a30"/>
+
+  <!-- gola de pele -->
+  <path d="M160,244 C190,278 310,278 340,244 L332,300 C296,326 204,326 168,300 Z" fill="url(#rurikFur)"/>
+  <path d="M160,244 Q170,264 180,278" stroke="#5c4e34" stroke-width="4" fill="none" opacity=".6"/>
+  <path d="M340,244 Q330,264 320,278" stroke="#5c4e34" stroke-width="4" fill="none" opacity=".6"/>
+
+  <!-- braços largos -->
+  <path d="M112,320 C88,380 84,450 100,520 L146,504 C134,448 136,384 148,320 Z" fill="#2a2219"/>
+  <path d="M388,320 C412,380 416,450 400,520 L354,504 C366,448 364,384 352,320 Z" fill="#1c160f"/>
+  <ellipse cx="118" cy="524" rx="18" ry="15" fill="url(#rurikSkin)"/>
+  <ellipse cx="382" cy="524" rx="18" ry="15" fill="url(#rurikSkin)"/>
+
+  <!-- pescoço grosso -->
+  <rect x="222" y="192" width="56" height="40" fill="url(#rurikSkin)"/>
+
+  <!-- cabeça -->
+  <ellipse cx="250" cy="150" rx="64" ry="66" fill="url(#rurikSkin)"/>
+  <ellipse cx="188" cy="154" rx="10" ry="15" fill="#a3714c"/>
+  <ellipse cx="312" cy="154" rx="10" ry="15" fill="#a3714c"/>
+
+  <!-- cabelo bagunçado -->
+  <path d="M188,120 C188,76 214,44 250,44 C286,44 312,76 312,120
+           C298,96 276,82 250,82 C224,82 202,96 188,120 Z" fill="#241a10"/>
+
+  <!-- sobrancelhas grossas e cerradas (ameaçador) -->
+  <path d="M204,140 L246,150" stroke="#1a120a" stroke-width="9" stroke-linecap="round"/>
+  <path d="M296,140 L254,150" stroke="#1a120a" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="222" cy="160" r="5.5" fill="#0e0a06"/>
+  <circle cx="278" cy="160" r="5.5" fill="#0e0a06"/>
+  <path d="M250,154 L242,188 L258,188 Z" fill="#a3714c"/>
+
+  <!-- barba cerrada -->
+  <path d="M186,178 C186,224 212,254 250,254 C288,254 314,224 314,178
+           C314,212 288,234 250,234 C212,234 186,212 186,178 Z" fill="#2e2214"/>
+  <path d="M222,206 Q250,196 278,206" stroke="#140e08" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- cicatriz -->
+  <path d="M290,120 L306,158" stroke="#7a4530" stroke-width="3" opacity=".7"/>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 900">
+  <defs>
+    <linearGradient id="lorainDress" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4c5fc0"/>
+      <stop offset="100%" stop-color="#333f8c"/>
+    </linearGradient>
+    <linearGradient id="lorainDressShade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2c3878"/>
+      <stop offset="100%" stop-color="#242e64"/>
+    </linearGradient>
+    <linearGradient id="lorainSkin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0b590"/>
+      <stop offset="100%" stop-color="#caa07a"/>
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="252" cy="874" rx="82" ry="15" fill="#000" opacity=".35"/>
+
+  <!-- pernas, postura levemente encolhida -->
+  <path d="M218,600 L210,830 L184,830 L200,600 Z" fill="#2e3878"/>
+  <path d="M286,600 L302,830 L276,830 L268,600 Z" fill="#242e64"/>
+  <path d="M182,822 L214,822 L218,844 L172,844 Z" fill="#12141e"/>
+  <path d="M274,822 L306,822 L312,844 L266,844 Z" fill="#12141e"/>
+
+  <!-- vestido -->
+  <path d="M196,320 C176,360 162,470 168,600 L332,600 C338,470 324,360 304,320
+           C286,296 268,286 250,286 C232,286 214,296 196,320 Z" fill="url(#lorainDress)"/>
+  <path d="M266,296 C284,320 300,400 302,470 L332,600 L300,600 C296,480 282,380 260,300 Z"
+        fill="url(#lorainDressShade)"/>
+  <!-- textura de tecido rasgado no ombro (referência à pista) -->
+  <path d="M292,300 L308,330 L296,326 L304,344 L288,332 Z" fill="#1e2660" opacity=".8"/>
+
+  <!-- ombros encolhidos e braços cruzados sobre o corpo (postura assustada) -->
+  <path d="M182,330 C164,360 158,410 172,450 C196,438 214,420 220,396 C206,376 194,354 182,330 Z" fill="#3846a0"/>
+  <path d="M318,330 C336,360 342,410 328,450 C304,438 286,420 280,396 C294,376 306,354 318,330 Z" fill="#333f8c"/>
+  <ellipse cx="182" cy="452" rx="15" ry="12" fill="url(#lorainSkin)"/>
+  <ellipse cx="318" cy="452" rx="15" ry="12" fill="url(#lorainSkin)"/>
+
+  <!-- pescoço -->
+  <rect x="234" y="252" width="32" height="34" fill="url(#lorainSkin)"/>
+
+  <!-- cabeça, levemente inclinada -->
+  <ellipse cx="248" cy="216" rx="54" ry="58" fill="url(#lorainSkin)"/>
+  <ellipse cx="198" cy="220" rx="8" ry="12" fill="#caa07a"/>
+  <ellipse cx="298" cy="220" rx="8" ry="12" fill="#caa07a"/>
+
+  <!-- cabelo desgrenhado -->
+  <path d="M192,206 C188,156 214,124 248,124 C282,124 308,156 304,206
+           C300,170 280,180 280,180 C280,180 268,150 248,150 C228,150 216,180 216,180
+           C216,180 196,170 192,206 Z" fill="#2e2114"/>
+  <path d="M188,200 C176,220 170,250 176,280" stroke="#2e2114" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M308,200 C320,220 326,250 320,280" stroke="#2e2114" stroke-width="10" fill="none" stroke-linecap="round"/>
+
+  <!-- sobrancelhas erguidas (medo) -->
+  <path d="M212,200 L236,206" stroke="#2e2114" stroke-width="5" stroke-linecap="round"/>
+  <path d="M284,200 L260,206" stroke="#2e2114" stroke-width="5" stroke-linecap="round"/>
+  <!-- olhos grandes e arregalados -->
+  <circle cx="221" cy="220" r="7" fill="#1a140d"/>
+  <circle cx="275" cy="220" r="7" fill="#1a140d"/>
+  <circle cx="223" cy="217" r="2" fill="#fff" opacity=".8"/>
+  <circle cx="277" cy="217" r="2" fill="#fff" opacity=".8"/>
+  <path d="M248,214 L243,240 L253,240 Z" fill="#caa07a"/>
+  <!-- boca pequena, tensa -->
+  <path d="M236,256 Q248,252 260,256" stroke="#8a5040" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- colar (pingente de madeira — referência à pista) -->
+  <path d="M226,282 Q248,300 270,282" stroke="#6a4c2c" stroke-width="4" fill="none"/>
+  <circle cx="248" cy="300" r="9" fill="#7a5a34"/>
+  <circle cx="248" cy="300" r="4" fill="#4a3520"/>
+</svg>

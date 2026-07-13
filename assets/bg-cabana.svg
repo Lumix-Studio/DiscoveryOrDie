@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="sky4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#04060b"/>
+      <stop offset="55%" stop-color="#0a121e"/>
+      <stop offset="100%" stop-color="#141c1a"/>
+    </linearGradient>
+    <linearGradient id="ground4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#141c12"/>
+      <stop offset="100%" stop-color="#080b06"/>
+    </linearGradient>
+    <linearGradient id="cabinWood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a2a1c"/>
+      <stop offset="100%" stop-color="#221609"/>
+    </linearGradient>
+    <radialGradient id="windowGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffdf8c" stop-opacity=".95"/>
+      <stop offset="45%" stop-color="#f2c766" stop-opacity=".5"/>
+      <stop offset="100%" stop-color="#f2c766" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="moonGlow4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c9d6ef" stop-opacity=".4"/>
+      <stop offset="100%" stop-color="#c9d6ef" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft4" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <filter id="softSmoke" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#sky4)"/>
+
+  <circle cx="360" cy="170" r="140" fill="url(#moonGlow4)"/>
+  <circle cx="360" cy="170" r="38" fill="#dbe6f7" opacity=".8"/>
+
+  <g fill="#e8eefc">
+    <circle cx="700" cy="90" r="1.3" opacity=".5"/>
+    <circle cx="900" cy="60" r="1.5" opacity=".55"/>
+    <circle cx="1150" cy="110" r="1.2" opacity=".5"/>
+    <circle cx="1400" cy="70" r="1.4" opacity=".55"/>
+    <circle cx="1600" cy="150" r="1.2" opacity=".45"/>
+    <circle cx="140" cy="260" r="1.1" opacity=".4"/>
+  </g>
+
+  <!-- floresta densa ao fundo -->
+  <path d="M0,700 L60,560 L140,660 L220,540 L300,650 L380,560 L460,660 L540,540 L620,650
+           L700,560 L790,660 L870,540 L950,650 L1030,560 L1110,660 L1190,540 L1270,650
+           L1350,560 L1430,660 L1510,540 L1600,650 L1680,560 L1770,660 L1850,540 L1920,650
+           L1920,780 L0,780 Z" fill="#0a1712"/>
+  <path d="M0,760 L90,660 L190,740 L290,640 L400,730 L520,650 L650,730 L800,650 L960,740
+           L1120,650 L1280,730 L1440,650 L1600,730 L1750,650 L1920,740 L1920,860 L0,860 Z"
+        fill="#0d1f18" opacity=".9"/>
+
+  <!-- terreno -->
+  <path d="M0,780 Q480,730 960,750 T1920,770 L1920,1080 L0,1080 Z" fill="url(#ground4)"/>
+
+  <!-- caminho até a porta -->
+  <polygon points="880,1080 1120,1080 1030,830 970,830" fill="#332818" opacity=".8"/>
+
+  <!-- silhuetas de árvores próximas, moldura -->
+  <g fill="#060d09">
+    <path d="M-30,900 L120,900 L100,600 L60,500 L20,600 L-40,900 Z"/>
+    <path d="M1800,930 L1960,930 L1935,610 L1890,510 L1845,610 L1790,930 Z"/>
+  </g>
+
+  <!-- cabana isolada -->
+  <g>
+    <ellipse cx="1000" cy="900" rx="230" ry="26" fill="#020402" opacity=".5"/>
+    <rect x="850" y="700" width="300" height="200" fill="url(#cabinWood)"/>
+    <polygon points="820,700 1180,700 1000,570" fill="#1a1108"/>
+    <!-- ripas -->
+    <g stroke="#170f07" stroke-width="3" opacity=".5">
+      <line x1="850" y1="740" x2="1150" y2="740"/>
+      <line x1="850" y1="780" x2="1150" y2="780"/>
+      <line x1="850" y1="820" x2="1150" y2="820"/>
+      <line x1="850" y1="860" x2="1150" y2="860"/>
+    </g>
+    <!-- porta -->
+    <rect x="960" y="790" width="80" height="110" fill="#140c06"/>
+    <circle cx="1030" cy="845" r="4" fill="#7a5a2c"/>
+    <!-- janela iluminada -->
+    <circle cx="900" cy="770" r="70" fill="url(#windowGlow)" filter="url(#soft4)"/>
+    <rect x="875" y="745" width="50" height="50" fill="#ffe9b0"/>
+    <rect x="875" y="745" width="50" height="50" fill="none" stroke="#1a1108" stroke-width="5"/>
+    <line x1="900" y1="745" x2="900" y2="795" stroke="#1a1108" stroke-width="4"/>
+    <line x1="875" y1="770" x2="925" y2="770" stroke="#1a1108" stroke-width="4"/>
+    <!-- silhueta parada perto da janela -->
+    <path d="M905,795 q-4,-34 10,-46 q13,11 9,46 Z" fill="#0a0704" opacity=".55"/>
+    <!-- chaminé -->
+    <rect x="1090" y="600" width="34" height="100" fill="#221609"/>
+    <g fill="#cfd6dd" opacity=".14" filter="url(#softSmoke)">
+      <ellipse cx="1107" cy="580" rx="20" ry="26"/>
+      <ellipse cx="1120" cy="530" rx="26" ry="32"/>
+      <ellipse cx="1100" cy="470" rx="34" ry="40"/>
+    </g>
+  </g>
+
+  <!-- névoa rasteira -->
+  <ellipse cx="700" cy="960" rx="380" ry="44" fill="#c9d6ef" opacity=".06"/>
+  <ellipse cx="1300" cy="990" rx="440" ry="48" fill="#c9d6ef" opacity=".06"/>
+</svg>

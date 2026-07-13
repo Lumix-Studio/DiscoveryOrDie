@@ -1,99 +1,40 @@
-# DIscoveryOrDie
+# Discovery or Die (DoD)
 
-> **"Toda investigação revela uma verdade. Algumas deveriam permanecer enterradas."**
+Visual novel de detetive. Você é **Bohr Holmes**, detetive particular, investigando o desaparecimento de **Lorain** numa vila da floresta — com várias rotas de vitória e derrota.
 
-Bem-vindo ao repositório oficial de **DIscoveryOrDie**, um jogo de investigação, suspense e terror psicológico desenvolvido pela **Lumix Studio**.
+**Capítulo 1 (demo): A Floresta** — primeira versão jogável, com placeholders de arte.
 
-Este repositório serve como a principal central de documentação para toda a equipe de desenvolvimento, reunindo a história, mecânicas, personagens, conceitos, artes e planejamento do projeto.
+## Rodar
 
----
+Abrir a pasta do projeto no **Godot 4.6** e apertar F5, ou:
 
-# 📖 Sobre o jogo
+```bash
+/Applications/Godot.app/Contents/MacOS/Godot --path .
+```
 
-Em **DIscoveryOrDie**, o jogador acompanha o detetive particular **Bohr Holmes** e o investigador **Jhon Poly** durante a investigação de uma série de desaparecimentos em uma pequena vila isolada.
+## Testar os sistemas de investigação (parte do Brunelli)
 
-O que inicialmente parece ser um simples caso policial rapidamente se transforma em uma conspiração envolvendo um antigo culto, rituais esquecidos e uma entidade conhecida como **Ogotsurúm**.
+Aperte **D** dentro do jogo (ou o botão 🛠 no topo) → painel dev com atalhos para testar cada sistema sem jogar a história:
 
-Cada descoberta aproxima os detetives da verdade... e também da morte.
+- **TASKs** 📋 — lista de tarefas com notificações e badge
+- **Pesquisa** 🔎 — busca por termos descobertos na investigação
+- **Análise de fotos** 📷 — minigame de zoom/pan e pistas escondidas
+- **Caderno** 📓 — evidências coletadas
 
----
+Checklist de teste completo: [`docs/BRUNELLI-SISTEMAS.md`](docs/BRUNELLI-SISTEMAS.md).
 
-# 🎯 Objetivos do Projeto
+## Docs
 
-Nosso objetivo é criar uma experiência focada em:
+- [`docs/PLANO.md`](docs/PLANO.md) — plano de desenvolvimento, arquitetura, etapas
+- [`docs/BRUNELLI-SISTEMAS.md`](docs/BRUNELLI-SISTEMAS.md) — spec dos sistemas de investigação
+- `docs/Discovery or Die (DoD) — GDD.docx` — GDD original (texto em `docs/gdd-extracted.txt`)
 
-* 🔍 Investigação
-* 🧩 Resolução de mistérios
-* 🌑 Terror psicológico
-* 📖 Narrativa cinematográfica
-* 🎮 Exploração
-* 💬 Diálogos imersivos
-* 🗂️ Coleta de documentos e evidências
+## Equipe (do GDD)
 
----
-
-# 🕵️ Arco Atual
-
-## Arco 1 — O Eco da Caverna
-
-Bohr Holmes e Jhon Poly chegam a uma vila marcada pelo desaparecimento de diversas jovens.
-
-Ao longo da investigação, descobrem um antigo culto que prepara garotas para servirem de receptáculo para uma entidade ancestral chamada **Ogotsurúm**.
-
-O primeiro arco termina quando ambos percebem que enfrentam algo muito maior do que um simples criminoso.
-
----
-
-# 👥 Personagens Principais
-
-### 🕵️ Bohr Holmes
-
-* Detetive particular
-* Extremamente observador
-* Especialista em resolver casos complexos
-
-### 👮 Jhon Poly
-
-* Detetive da Polícia Civil
-* Parceiro de Bohr
-* Investigador experiente
-
-### 🏛️ Chefe da Vila
-
-* Líder da comunidade
-* Guardião do culto
-* Responsável pelos rituais
-
-### 👁️ Ogotsurúm
-
-A misteriosa entidade cultuada pela antiga tribo Okutsuruki.
-
-Sua verdadeira origem ainda permanece desconhecida.
-
----
-
-# 📌 Organização do Projeto
-
-Cada sistema deverá possuir sua própria documentação.
-
-Sempre que possível:
-
-* documente novas funcionalidades;
-* mantenha o código organizado;
-* utilize nomes claros para arquivos e cenas;
-* evite alterar a narrativa sem aprovação;
-* mantenha os commits descritivos.
-
----
-
-# 🤝 Contribuindo
-
-Antes de iniciar qualquer tarefa:
-
-* leia a documentação relacionada;
-* verifique as tarefas em andamento;
-* mantenha comunicação com a equipe;
-* documente alterações importantes.
-
----
-
+| Quem | Área |
+|---|---|
+| Brunelli | Minigames de investigação + interface |
+| Darlyson | Diálogos, personagens, ambientação, animação |
+| Veilcrus | Suporte aos dois |
+| Nicolas | Algumas artes de ui |
+| Bonie | Artes gerais |

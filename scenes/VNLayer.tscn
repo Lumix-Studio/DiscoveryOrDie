@@ -1,0 +1,207 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://scripts/vn/VNLayer.gd" id="1_vnlayer"]
+[ext_resource type="Script" path="res://scripts/vn/SceneBackground.gd" id="2_scenebg"]
+[ext_resource type="Script" path="res://scripts/vn/CharacterStage.gd" id="3_charstage"]
+[ext_resource type="Script" path="res://scripts/vn/DialogueBox.gd" id="4_dialoguebox"]
+[ext_resource type="Script" path="res://scripts/vn/ChoicesBox.gd" id="5_choicesbox"]
+[ext_resource type="Script" path="res://scripts/vn/EndingOverlay.gd" id="6_endingoverlay"]
+
+[sub_resource type="StyleBoxFlat" id="SBF_dialogue"]
+bg_color = Color(0.0509804, 0.0666667, 0.0901961, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.831373, 0.658824, 0.262745, 0.35)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.45)
+shadow_size = 20
+shadow_offset = Vector2(0, -4)
+
+[sub_resource type="StyleBoxFlat" id="SBF_chip"]
+bg_color = Color(0.0862745, 0.113725, 0.152941, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.831373, 0.658824, 0.262745, 1)
+corner_radius_top_left = 999
+corner_radius_top_right = 999
+corner_radius_bottom_right = 999
+corner_radius_bottom_left = 999
+content_margin_left = 20.0
+content_margin_top = 5.0
+content_margin_right = 20.0
+content_margin_bottom = 5.0
+
+[node name="VNLayer" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vnlayer")
+
+[node name="Backdrop" type="ColorRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="SceneLayer" type="TextureRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 6
+script = ExtResource("2_scenebg")
+
+[node name="CharLayer" type="Control" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+clip_contents = true
+script = ExtResource("3_charstage")
+
+[node name="DialogueBox" type="Panel" parent="."]
+layout_mode = 0
+anchor_left = 0.04
+anchor_top = 0.75
+anchor_right = 0.96
+anchor_bottom = 0.96
+mouse_filter = 0
+theme_override_styles/panel = SubResource("SBF_dialogue")
+script = ExtResource("4_dialoguebox")
+
+[node name="SpeakerChip" type="PanelContainer" parent="DialogueBox"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = -19.0
+offset_right = 150.0
+offset_bottom = 16.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("SBF_chip")
+
+[node name="SpeakerName" type="Label" parent="DialogueBox/SpeakerChip"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.831373, 0.658824, 0.262745, 1)
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+vertical_alignment = 1
+text = ""
+
+[node name="DialogueText" type="Label" parent="DialogueBox"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 30.0
+offset_right = -32.0
+offset_bottom = -40.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.901961, 0.929412, 0.952941, 1)
+theme_override_font_sizes/font_size = 19
+autowrap_mode = 2
+vertical_alignment = 0
+text = ""
+
+[node name="DialogueHint" type="Label" parent="DialogueBox"]
+layout_mode = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -38.0
+offset_right = -16.0
+offset_bottom = -10.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.831373, 0.658824, 0.262745, 1)
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "▼"
+visible = false
+
+[node name="ChoicesBox" type="VBoxContainer" parent="."]
+layout_mode = 0
+anchor_left = 0.09
+anchor_top = 0.07
+anchor_right = 0.91
+anchor_bottom = 0.72
+mouse_filter = 2
+theme_override_constants/separation = 14
+alignment = 1
+visible = false
+script = ExtResource("5_choicesbox")
+
+[node name="EndingOverlay" type="Control" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+visible = false
+script = ExtResource("6_endingoverlay")
+
+[node name="Backdrop" type="ColorRect" parent="EndingOverlay"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0117647, 0.0196078, 0.0313725, 0.93)
+
+[node name="Card" type="PanelContainer" parent="EndingOverlay"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+custom_minimum_size = Vector2(1150, 0)
+
+[node name="VBox" type="VBoxContainer" parent="EndingOverlay/Card"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Title" type="Label" parent="EndingOverlay/Card/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+theme_override_colors/font_color = Color(0.831373, 0.658824, 0.262745, 1)
+horizontal_alignment = 1
+autowrap_mode = 2
+text = ""
+
+[node name="Text" type="Label" parent="EndingOverlay/Card/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+theme_override_constants/line_spacing = 6
+horizontal_alignment = 1
+autowrap_mode = 2
+text = ""
+
+[node name="RestartButton" type="Button" parent="EndingOverlay/Card/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 15
+text = "Jogar novamente"

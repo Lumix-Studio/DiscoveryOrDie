@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="sky3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#05070d"/>
+      <stop offset="60%" stop-color="#0b1420"/>
+      <stop offset="100%" stop-color="#13201c"/>
+    </linearGradient>
+    <linearGradient id="trailGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a2318"/>
+      <stop offset="100%" stop-color="#463824"/>
+    </linearGradient>
+    <radialGradient id="vanishGlow" cx="50%" cy="38%" r="30%">
+      <stop offset="0%" stop-color="#6b7a63" stop-opacity=".45"/>
+      <stop offset="100%" stop-color="#6b7a63" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="dapple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#dfe9c8" stop-opacity=".18"/>
+      <stop offset="100%" stop-color="#dfe9c8" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft3" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#sky3)"/>
+  <circle cx="960" cy="330" r="260" fill="url(#vanishGlow)"/>
+
+  <g fill="#e8eefc">
+    <circle cx="120" cy="90" r="1.3" opacity=".5"/>
+    <circle cx="1800" cy="120" r="1.4" opacity=".55"/>
+    <circle cx="1700" cy="70" r="1.1" opacity=".45"/>
+    <circle cx="220" cy="60" r="1.2" opacity=".5"/>
+  </g>
+
+  <!-- solo -->
+  <rect x="0" y="620" width="1920" height="460" fill="#0e150d"/>
+
+  <!-- trilha em perspectiva, convergindo pro centro -->
+  <polygon points="760,1080 1160,1080 1010,660 910,660" fill="url(#trailGrad)"/>
+  <polygon points="820,1080 1100,1080 995,690 925,690" fill="#5a4a30" opacity=".35"/>
+
+  <!-- raízes/pedras na trilha -->
+  <g fill="#1c150d" opacity=".8">
+    <ellipse cx="880" cy="960" rx="46" ry="16"/>
+    <ellipse cx="1050" cy="900" rx="36" ry="13"/>
+    <ellipse cx="960" cy="1030" rx="60" ry="18"/>
+  </g>
+  <g stroke="#241a10" stroke-width="5" opacity=".7" fill="none">
+    <path d="M840,1000 q30,-20 70,-6"/>
+    <path d="M1020,930 q-24,-14 -50,0"/>
+  </g>
+
+  <!-- fileiras de árvores, da mais próxima (grande) à mais distante (pequena) -->
+  <g fill="#0a1712">
+    <path d="M0,1080 L0,520 L70,380 L150,540 L230,360 L310,1080 Z"/>
+    <path d="M1920,1080 L1920,520 L1850,380 L1770,540 L1690,360 L1610,1080 Z"/>
+  </g>
+  <g fill="#0d1f18">
+    <path d="M60,1080 L60,600 L120,470 L190,610 L260,450 L340,1080 Z"/>
+    <path d="M1860,1080 L1860,600 L1800,470 L1730,610 L1660,450 L1580,1080 Z"/>
+  </g>
+  <g fill="#112a20">
+    <path d="M300,1080 L300,700 L350,590 L405,710 L460,580 L520,1080 Z"/>
+    <path d="M1620,1080 L1620,700 L1570,590 L1515,710 L1460,580 L1400,1080 Z"/>
+  </g>
+  <g fill="#16362a">
+    <path d="M520,940 L520,760 L560,680 L602,770 L644,670 L690,940 Z"/>
+    <path d="M1400,940 L1400,760 L1360,680 L1318,770 L1276,670 L1230,940 Z"/>
+  </g>
+  <g fill="#1c4433">
+    <path d="M700,880 L700,760 L730,700 L760,765 L792,695 L825,880 Z"/>
+    <path d="M1220,880 L1220,760 L1190,700 L1160,765 L1128,695 L1095,880 Z"/>
+  </g>
+
+  <!-- luar salpicado entre as árvores -->
+  <circle cx="960" cy="500" r="90" fill="url(#dapple)" filter="url(#soft3)"/>
+  <circle cx="700" cy="620" r="60" fill="url(#dapple)" filter="url(#soft3)"/>
+  <circle cx="1220" cy="600" r="70" fill="url(#dapple)" filter="url(#soft3)"/>
+
+  <!-- névoa baixa -->
+  <ellipse cx="960" cy="880" rx="520" ry="50" fill="#d9e6ff" opacity=".07"/>
+  <ellipse cx="960" cy="960" rx="700" ry="60" fill="#d9e6ff" opacity=".06"/>
+</svg>

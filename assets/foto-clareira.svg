@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800"
+     font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1d2f3b"/>
+      <stop offset="0.55" stop-color="#111d26"/>
+      <stop offset="1" stop-color="#0a1218"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#13212b"/>
+      <stop offset="1" stop-color="#0a1015"/>
+    </linearGradient>
+    <radialGradient id="beam" cx="0.5" cy="0" r="0.95">
+      <stop offset="0" stop-color="#e3ecdf" stop-opacity="0.20"/>
+      <stop offset="0.5" stop-color="#cdd8c9" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#cdd8c9" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.44" r="0.75">
+      <stop offset="0.55" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.62"/>
+    </radialGradient>
+  </defs>
+
+  <!-- céu / fundo -->
+  <rect x="0" y="0" width="1200" height="560" fill="url(#sky)"/>
+  <!-- feixe de luar entrando -->
+  <polygon points="520,0 690,0 860,560 360,560" fill="url(#beam)"/>
+
+  <!-- árvores distantes (silhuetas) -->
+  <g fill="#0e1922" opacity="0.85">
+    <polygon points="120,560 172,175 224,560"/>
+    <polygon points="250,560 300,245 350,560"/>
+    <polygon points="405,560 445,300 485,560"/>
+    <polygon points="760,560 800,285 840,560"/>
+    <polygon points="900,560 955,205 1010,560"/>
+    <polygon points="1030,560 1076,150 1122,560"/>
+  </g>
+
+  <!-- chão / clareira -->
+  <rect x="0" y="520" width="1200" height="280" fill="url(#ground)"/>
+  <ellipse cx="600" cy="642" rx="540" ry="150" fill="#17262f" opacity="0.6"/>
+  <g stroke="#0c141a" stroke-width="2" opacity="0.5">
+    <path d="M120 690 q180 -26 360 -10" fill="none"/>
+    <path d="M700 700 q220 -30 420 -6" fill="none"/>
+  </g>
+
+  <!-- troncos em pé (laterais) + copas -->
+  <g>
+    <rect x="66" y="120" width="72" height="470" rx="18" fill="#0c151b"/>
+    <ellipse cx="104" cy="150" rx="122" ry="72" fill="#122029" opacity="0.9"/>
+    <rect x="1058" y="90" width="82" height="500" rx="20" fill="#0b1319"/>
+    <ellipse cx="1100" cy="128" rx="138" ry="82" fill="#101d26" opacity="0.9"/>
+  </g>
+
+  <!-- névoa baixa -->
+  <g fill="#3a5566">
+    <ellipse cx="380" cy="556" rx="360" ry="58" opacity="0.16"/>
+    <ellipse cx="820" cy="596" rx="430" ry="70" opacity="0.14"/>
+    <ellipse cx="600" cy="660" rx="540" ry="70" opacity="0.10"/>
+  </g>
+
+  <!-- tronco caído (atravessa o centro-baixo) -->
+  <g transform="rotate(-4 610 630)">
+    <rect x="330" y="602" width="520" height="56" rx="28" fill="#241a12"/>
+    <rect x="330" y="602" width="520" height="20" rx="10" fill="#33261a" opacity="0.85"/>
+    <ellipse cx="836" cy="630" rx="16" ry="28" fill="#3a2c1d"/>
+    <ellipse cx="836" cy="630" rx="8" ry="16" fill="#1c130b"/>
+  </g>
+
+  <!-- ============================ DETALHES (hotspots) ============================ -->
+
+  <!-- PEGADAS DUPLAS  · hotspot (300,640) r100 · seguem para o norte -->
+  <g opacity="0.92">
+    <!-- trilha descalça (pequena) -->
+    <g fill="#2a1f12" stroke="#3d2e1b" stroke-width="1">
+      <ellipse cx="284" cy="690" rx="8" ry="13"/>
+      <ellipse cx="279" cy="650" rx="8" ry="13"/>
+      <ellipse cx="285" cy="611" rx="7" ry="12"/>
+      <ellipse cx="281" cy="576" rx="7" ry="12"/>
+    </g>
+    <!-- trilha de bota (grande) -->
+    <g fill="#1d150c" stroke="#33261a" stroke-width="1">
+      <path d="M312 704 q-12 -6 -12 -22 q0 -14 12 -18 q13 4 13 18 q0 16 -13 22z"/>
+      <path d="M320 660 q-12 -6 -12 -22 q0 -14 12 -18 q13 4 13 18 q0 16 -13 22z"/>
+      <path d="M314 614 q-11 -6 -11 -20 q0 -13 11 -17 q12 4 12 17 q0 14 -12 20z"/>
+      <path d="M320 573 q-11 -6 -11 -20 q0 -13 11 -16 q12 3 12 16 q0 14 -12 20z"/>
+    </g>
+  </g>
+
+  <!-- TECIDO RASGADO  · hotspot (975,378) r90 · retalho azul num galho -->
+  <g>
+    <path d="M1032 300 q-42 40 -74 96" stroke="#0c151b" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M956 352 l42 6 l-6 34 l24 20 l-30 16 l-20 -22 l-18 16 l-4 -42 l12 -22z" fill="#3f6fa6"/>
+    <path d="M956 352 l42 6 l-10 20 l-24 -6z" fill="#2c5688"/>
+    <path d="M986 392 l24 20 l-30 16 l-6 -26z" fill="#345f92"/>
+    <path d="M960 372 l-4 42 l16 -14z" fill="#4b7db4" opacity="0.9"/>
+  </g>
+
+  <!-- COLAR DE LORAIN  · hotspot (610,604) r80 · corrente arrebentada perto do tronco -->
+  <g>
+    <path d="M574 600 q34 -26 72 -4" stroke="#8d9299" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.92"/>
+    <path d="M574 600 q-7 14 4 27" stroke="#8d9299" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M646 596 q11 12 5 27" stroke="#8d9299" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <ellipse cx="612" cy="630" rx="10" ry="14" fill="#6b4a2a" stroke="#3a2716" stroke-width="2"/>
+    <ellipse cx="609" cy="626" rx="3" ry="5" fill="#ad885c" opacity="0.85"/>
+  </g>
+
+  <!-- ============================ MOLDURA / ARQUIVO ============================ -->
+  <rect x="0" y="0" width="1200" height="800" fill="url(#vig)"/>
+  <rect x="10" y="10" width="1180" height="780" fill="none" stroke="#000000" stroke-opacity="0.5" stroke-width="2"/>
+  <!-- cantos de arquivo -->
+  <g stroke="#d4a843" stroke-opacity="0.55" stroke-width="3" fill="none">
+    <path d="M26 26 h34 M26 26 v34"/>
+    <path d="M1174 26 h-34 M1174 26 v34"/>
+    <path d="M26 774 h34 M26 774 v-34"/>
+    <path d="M1174 774 h-34 M1174 774 v-34"/>
+  </g>
+  <!-- faixa de legenda -->
+  <rect x="0" y="748" width="1200" height="52" fill="#000000" opacity="0.55"/>
+  <text x="28" y="782" fill="#d4a843" font-size="26" letter-spacing="3">ARQUIVO · CLAREIRA NORTE</text>
+  <text x="1172" y="782" fill="#9db1c5" font-size="22" text-anchor="end" letter-spacing="2">CENA 01</text>
+</svg>

@@ -1,0 +1,631 @@
+{
+ "startNode": "title",
+ "nodes": {
+  "title": {
+   "id": "title",
+   "speaker": "",
+   "text": "Discovery or Die\n\nCapítulo 1 — A Floresta",
+   "next": "intro_01"
+  },
+  "intro_01": {
+   "id": "intro_01",
+   "bg": "vila",
+   "chars": [
+    {
+     "id": "bohr",
+     "pos": "left"
+    },
+    {
+     "id": "jhon",
+     "pos": "right"
+    }
+   ],
+   "speaker": "Jhon",
+   "text": "Chegamos. Se eu soubesse que \"floresta\" significava duas horas de estrada de terra, tinha trazido botas melhores.",
+   "next": "intro_02"
+  },
+  "intro_02": {
+   "id": "intro_02",
+   "speaker": "Bohr",
+   "text": "Se soubesse que ia reclamar a viagem inteira, eu tinha trazido tapa-ouvidos.",
+   "next": "intro_03"
+  },
+  "intro_03": {
+   "id": "intro_03",
+   "speaker": "Jhon",
+   "text": "Engraçadinho. Bora logo — o povoado é ali na frente, e parece que já tem gente esperando a gente.",
+   "actions": [
+    [
+     "task",
+     "t_falar_estevan",
+     "Falar com Estevan"
+    ]
+   ],
+   "next": "intro_04"
+  },
+  "intro_04": {
+   "id": "intro_04",
+   "speaker": "Jhon",
+   "text": "Cabanas de madeira, tocha acesa mesmo de dia, ninguém olhando nos olhos de ninguém... e ali, vindo na nossa direção: deve ser o Estevan. A carta dizia \"um homem com o peso do mundo nos ombros\". Bateu certinho.",
+   "next": "intro_05"
+  },
+  "intro_05": {
+   "id": "intro_05",
+   "chars": [
+    {
+     "id": "bohr",
+     "pos": "left"
+    },
+    {
+     "id": "estevan",
+     "pos": "center"
+    },
+    {
+     "id": "jhon",
+     "pos": "right"
+    }
+   ],
+   "speaker": "Estevan",
+   "text": "Vocês são os detetives que eu mandei chamar? Sou Estevan — cuido desta vila há quase vinte anos. Obrigado por virem tão rápido.",
+   "next": "estevan_01"
+  },
+  "estevan_01": {
+   "id": "estevan_01",
+   "speaker": "Bohr",
+   "text": "Bohr Holmes. Este é meu parceiro, Jhon Poly. Soubemos que uma moça desapareceu — e que o senhor prefere resolver isso antes que vire assunto pra cidade grande.",
+   "next": "estevan_02"
+  },
+  "estevan_02": {
+   "id": "estevan_02",
+   "speaker": "Estevan",
+   "text": "Lorain. Dezessete anos, filha de um dos coletores da vila. Sumiu há três dias, na clareira ao norte daqui.",
+   "next": "estevan_03"
+  },
+  "estevan_03": {
+   "id": "estevan_03",
+   "speaker": "Estevan",
+   "text": "Não é do feitio dela desaparecer assim. Sem recado, sem despedida. Já procuramos por conta própria, mas ninguém aqui entende de rastro como vocês, gente da cidade.",
+   "next": "estevan_04"
+  },
+  "estevan_04": {
+   "id": "estevan_04",
+   "speaker": "Jhon",
+   "text": "O senhor tem ideia de quem faria isso? Alguém de fora, algum morador com quem ela tenha brigado ultimamente?",
+   "next": "estevan_05"
+  },
+  "estevan_05": {
+   "id": "estevan_05",
+   "speaker": "Estevan",
+   "text": "Eu... prefiro não especular e apontar o dedo errado. Vejam com os próprios olhos. Comecem pela clareira — foi lá que a viram pela última vez.",
+   "next": "estevan_06"
+  },
+  "estevan_06": {
+   "id": "estevan_06",
+   "speaker": "Bohr",
+   "text": "Evasivo. Anota aí, Jhon: chefe de vila com respostas cheias de reticências. Não quer dizer nada ainda... mas eu anotaria mesmo assim.",
+   "actions": [
+    [
+     "taskDone",
+     "t_falar_estevan"
+    ],
+    [
+     "task",
+     "t_examinar_clareira",
+     "Examinar a clareira onde Lorain sumiu"
+    ],
+    [
+     "research",
+     "vila"
+    ],
+    [
+     "research",
+     "lorain"
+    ]
+   ],
+   "next": "to_clareira_01"
+  },
+  "to_clareira_01": {
+   "id": "to_clareira_01",
+   "speaker": "Jhon",
+   "text": "A clareira é uns vinte minutos direto pro norte, segundo o próprio Estevan. Vamos ver esse \"sem sinal de briga\" de perto.",
+   "next": "clareira_01"
+  },
+  "clareira_01": {
+   "id": "clareira_01",
+   "bg": "clareira",
+   "chars": [
+    {
+     "id": "bohr",
+     "pos": "left"
+    },
+    {
+     "id": "jhon",
+     "pos": "right"
+    }
+   ],
+   "speaker": "Bohr",
+   "text": "Aqui é. Grama pisoteada, silêncio errado pro tamanho do lugar... e aquele tronco caído bem no meio, como se alguém tivesse tropeçado com pressa.",
+   "next": "clareira_02"
+  },
+  "clareira_02": {
+   "id": "clareira_02",
+   "speaker": "Jhon",
+   "text": "Sem sangue, sem galho quebrado de luta. Isso é bom sinal ou ruim, Bohr?",
+   "next": "clareira_03"
+  },
+  "clareira_03": {
+   "id": "clareira_03",
+   "speaker": "Bohr",
+   "text": "Depende do que a gente achar quando parar de conversar e começar a olhar de verdade. Tira fotos daqui, Jhon. De tudo, mesmo do que parecer bobagem.",
+   "actions": [
+    [
+     "taskDone",
+     "t_examinar_clareira"
+    ],
+    [
+     "photo",
+     "foto_clareira"
+    ],
+    [
+     "task",
+     "t_analisar_foto",
+     "Analisar a foto da clareira"
+    ]
+   ],
+   "next": "clareira_04"
+  },
+  "clareira_04": {
+   "id": "clareira_04",
+   "speaker": "Jhon",
+   "text": "Já era, chefe. *clique* Se tiver alguma coisa escondida nessa grama, essa foto vai entregar — é só saber onde catar.",
+   "next": "clareira_05"
+  },
+  "clareira_05": {
+   "id": "clareira_05",
+   "speaker": "Bohr",
+   "text": "Ótimo. Agora... deixa eu pensar no que a gente faz com isso tudo.",
+   "next": "hub"
+  },
+  "hub": {
+   "id": "hub",
+   "speaker": "Bohr",
+   "text": "Recapitulando: uma moça sumida, uma clareira sem sinal de briga, e um chefe de vila que escolhe cada palavra a dedo. Preciso organizar isso.\nSe eu esquecer o que já sei, dou uma olhada nas Tarefas 📋; pra cruzar nomes e lugares, na Pesquisa 🔎; e se sobrar pista pra catar, nas Fotos 📷, ali em cima. Por onde eu sigo?",
+   "choices": [
+    {
+     "text": "Analisar as pistas da foto (abrir Fotos 📷 no topo)",
+     "if": {
+      "notFlag": "foto_clareira_completa"
+     },
+     "next": "hub_lembrete_foto"
+    },
+    {
+     "text": "Seguir as pegadas até a trilha norte",
+     "if": {
+      "flag": "foto_clareira_completa"
+     },
+     "next": "trilha_01"
+    },
+    {
+     "text": "Conversar com Ana, a moradora",
+     "if": {
+      "flag": "trilha_visitada"
+     },
+     "next": "ana_01"
+    },
+    {
+     "text": "Acusar Estevan de estar armando tudo",
+     "next": "accuse_01"
+    },
+    {
+     "text": "Ir até a cabana do caçador",
+     "if": {
+      "evidence": [
+       "ev_cabana"
+      ]
+     },
+     "next": "cabana_01"
+    }
+   ]
+  },
+  "hub_lembrete_foto": {
+   "id": "hub_lembrete_foto",
+   "speaker": "Jhon",
+   "text": "Antes de sair correndo atrás de pegada, Bohr... acho que ainda sobrou pista pra catar naquela foto. Abre a galeria de Fotos aí no teu bloco e dá uma olhada com calma.",
+   "next": "hub"
+  },
+  "trilha_01": {
+   "id": "trilha_01",
+   "bg": "trilha",
+   "chars": [
+    {
+     "id": "bohr",
+     "pos": "left"
+    },
+    {
+     "id": "jhon",
+     "pos": "right"
+    }
+   ],
+   "speaker": "Jhon",
+   "text": "As pegadas somem e voltam a aparecer entre as raízes, mas dá pra seguir. Fica esperto por onde pisa.",
+   "next": "trilha_02"
+  },
+  "trilha_02": {
+   "id": "trilha_02",
+   "speaker": "Bohr",
+   "text": "Trilha estreita, árvores altas demais pra qualquer luz de lua decente chegar ao chão. Perfeita pra quem não quer ser visto — ou pra quem não quer ser seguido.",
+   "next": "trilha_03"
+  },
+  "trilha_03": {
+   "id": "trilha_03",
+   "speaker": "Jhon",
+   "text": "Bohr, para. Olha isso: uma armadilha de caça. Enferrujada por fora, mas ainda armada por dentro. Isso não é coisa esquecida de anos atrás.",
+   "next": "trilha_04"
+  },
+  "trilha_04": {
+   "id": "trilha_04",
+   "speaker": "Bohr",
+   "text": "Alguém mantém isso pronta pra uso. Vale registrar essa \"trilha norte\" na pesquisa assim que a gente puder — deve ter histórico nos arquivos da vila. Por ora, é melhor falar com alguém que conheça esses arredores de verdade. Ana, talvez.",
+   "actions": [
+    [
+     "task",
+     "t_falar_ana",
+     "Conversar com a moradora Ana"
+    ],
+    [
+     "flag",
+     "trilha_visitada"
+    ]
+   ],
+   "next": "hub"
+  },
+  "ana_01": {
+   "id": "ana_01",
+   "bg": "vila",
+   "chars": [
+    {
+     "id": "bohr",
+     "pos": "left"
+    },
+    {
+     "id": "ana",
+     "pos": "center"
+    },
+    {
+     "id": "jhon",
+     "pos": "right"
+    }
+   ],
+   "speaker": "Bohr",
+   "text": "Dona Ana? Nos disseram que a senhora conhece cada palmo desses arredores como a palma da mão.",
+   "next": "ana_02"
+  },
+  "ana_02": {
+   "id": "ana_02",
+   "speaker": "Ana",
+   "text": "Vocês são os forasteiros que o Estevan chamou. Aqui a gente não tem costume de falar dos nossos assuntos com gente de fora.",
+   "next": "ana_03"
+  },
+  "ana_03": {
+   "id": "ana_03",
+   "speaker": "Bohr",
+   "text": "Nem sobre uma moça desaparecida? Lorain merece mais do que desconfiança, dona Ana. Do jeito que a coisa tá, mais um dia parado pode ser um dia de menos pra ela.",
+   "next": "ana_04"
+  },
+  "ana_04": {
+   "id": "ana_04",
+   "speaker": "Ana",
+   "text": "...Tem um nome que ninguém aqui gosta de pronunciar. Rurik. Foi o melhor caçador que essa vila já teve — até brigar feio com o Estevan, dois anos atrás, por causa de terras de caça. Foi expulso e proibido de voltar.",
+   "next": "ana_05"
+  },
+  "ana_05": {
+   "id": "ana_05",
+   "speaker": "Ana",
+   "text": "Dizem que ele vive sozinho agora, numa cabana abandonada, mata adentro. Não tô dizendo que foi ele. Só digo que, se tem alguém nessa floresta capaz de armar uma armadilha e não deixar rastro, é esse homem. Pesquisa esse nome, detetive. Rurik.",
+   "actions": [
+    [
+     "taskDone",
+     "t_falar_ana"
+    ],
+    [
+     "flag",
+     "sabe_rurik"
+    ],
+    [
+     "research",
+     "rurik"
+    ],
+    [
+     "task",
+     "t_encontrar_cabana",
+     "Encontrar a cabana do caçador",
+     "Seguir a trilha norte até a cabana abandonada."
+    ]
+   ],
+   "next": "hub"
+  },
+  "accuse_01": {
+   "id": "accuse_01",
+   "bg": "vila",
+   "chars": [
+    {
+     "id": "bohr",
+     "pos": "left"
+    },
+    {
+     "id": "estevan",
+     "pos": "center"
+    },
+    {
+     "id": "jhon",
+     "pos": "right"
+    }
+   ],
+   "speaker": "Bohr",
+   "text": "Estevan. Vou ser direto: acho que o senhor sabe mais do que está dizendo sobre o sumiço de Lorain.",
+   "next": "accuse_02"
+  },
+  "accuse_02": {
+   "id": "accuse_02",
+   "speaker": "Estevan",
+   "text": "Como é que é? Fui eu que mandei chamar vocês! Sou eu que não durmo direito há três noites por causa dessa menina!",
+   "next": "accuse_03"
+  },
+  "accuse_03": {
+   "id": "accuse_03",
+   "speaker": "Bohr",
+   "text": "Respostas evasivas, uma vila inteira com medo de falar demais... não seria a primeira vez que um chefe esconde os próprios erros atrás de uma investigação de fachada.",
+   "next": "accuse_04"
+  },
+  "accuse_04": {
+   "id": "accuse_04",
+   "speaker": "Estevan",
+   "text": "Fora. Os dois. Eu não preciso de forasteiro me chamando de mentiroso dentro da minha própria vila — enquanto uma menina continua lá fora, sozinha, esperando alguém que ainda queira procurar.",
+   "next": "accuse_05"
+  },
+  "accuse_05": {
+   "id": "accuse_05",
+   "speaker": "Jhon",
+   "text": "Bohr... acho que você acabou de fechar a única porta que a gente tinha aberta.",
+   "next": "ending_lose_acusacao"
+  },
+  "ending_lose_acusacao": {
+   "id": "ending_lose_acusacao",
+   "ending": "lose",
+   "title": "Acusação Precipitada",
+   "text": "Estevan expulsa vocês da vila ainda naquela noite. Sem apoio, sem pistas, sem segunda chance, a busca por Lorain termina ali — e ela nunca é encontrada.\n\nÀs vezes o instinto do detetive aponta pro alvo errado. E o preço disso é alto demais."
+  },
+  "cabana_01": {
+   "id": "cabana_01",
+   "bg": "cabana",
+   "chars": [
+    {
+     "id": "bohr",
+     "pos": "left"
+    },
+    {
+     "id": "jhon",
+     "pos": "right"
+    }
+   ],
+   "speaker": "Jhon",
+   "text": "Ali. No fim da trilha, exatamente como a Ana descreveu — uma cabana que devia estar vazia há dois anos.",
+   "next": "cabana_02"
+  },
+  "cabana_02": {
+   "id": "cabana_02",
+   "speaker": "Bohr",
+   "text": "E não está. Tem luz na janela, e fumaça saindo da chaminé. Vazia é a última coisa que esse lugar é.",
+   "next": "cabana_03"
+  },
+  "cabana_03": {
+   "id": "cabana_03",
+   "chars": [
+    {
+     "id": "bohr",
+     "pos": "left"
+    },
+    {
+     "id": "lorain",
+     "pos": "center"
+    },
+    {
+     "id": "jhon",
+     "pos": "right"
+    }
+   ],
+   "speaker": "Bohr",
+   "text": "...Espera. Jhon, olha a janela, devagar. É ela. É a Lorain.",
+   "next": "cabana_04"
+  },
+  "cabana_04": {
+   "id": "cabana_04",
+   "speaker": "Jhon",
+   "text": "Viva. Machucada, com medo estampado na cara, mas viva. Bohr, a gente precisa agir antes que...",
+   "next": "cabana_05"
+  },
+  "cabana_05": {
+   "id": "cabana_05",
+   "chars": [
+    {
+     "id": "bohr",
+     "pos": "left"
+    },
+    {
+     "id": "rurik",
+     "pos": "center"
+    },
+    {
+     "id": "jhon",
+     "pos": "right"
+    }
+   ],
+   "speaker": "Jhon",
+   "text": "Quieto. Alguém tá saindo da cabana agora mesmo.",
+   "next": "cabana_06"
+  },
+  "cabana_06": {
+   "id": "cabana_06",
+   "speaker": "Bohr",
+   "text": "Rurik. Bom saber que o nome que a Ana deu não era só fofoca de vila pequena.",
+   "next": "escolha_final"
+  },
+  "escolha_final": {
+   "id": "escolha_final",
+   "speaker": "Bohr",
+   "text": "Ele ainda não notou a gente. É agora ou nunca, Jhon — como a gente joga essa mão?",
+   "choices": [
+    {
+     "text": "Invadir sozinho, no impulso",
+     "next": "lose_impulso_01"
+    },
+    {
+     "text": "Armar uma emboscada com Jhon",
+     "if": {
+      "evidence": [
+       "ev_pegadas",
+       "ev_tecido",
+       "ev_colar"
+      ]
+     },
+     "next": "ambush_01"
+    },
+    {
+     "text": "Esperar e observar mais um pouco",
+     "next": "espera_01"
+    }
+   ]
+  },
+  "lose_impulso_01": {
+   "id": "lose_impulso_01",
+   "speaker": "Bohr",
+   "text": "Sem tempo pra plano. Eu vou.",
+   "next": "lose_impulso_02"
+  },
+  "lose_impulso_02": {
+   "id": "lose_impulso_02",
+   "speaker": "Rurik",
+   "text": "Devia ter ficado na cidade, detetive.",
+   "next": "lose_impulso_03"
+  },
+  "lose_impulso_03": {
+   "id": "lose_impulso_03",
+   "speaker": "Jhon",
+   "text": "Bohr, não...!",
+   "next": "ending_lose_impulso"
+  },
+  "ending_lose_impulso": {
+   "id": "ending_lose_impulso",
+   "ending": "lose",
+   "title": "Coragem Não É Plano",
+   "text": "Rurik não hesita, e Bohr paga caro pela pressa. Sem apoio, sem plano, sem saída — a investigação termina na porta da cabana, e Lorain continua presa lá dentro.\n\nCoragem sem estratégia é só um jeito mais rápido de perder."
+  },
+  "espera_01": {
+   "id": "espera_01",
+   "speaker": "Jhon",
+   "text": "A gente espera mais um pouco, então. Ele pode se afastar e abrir uma brecha melhor — ou pode notar a gente parado feito estátua no meio do mato. Cada minuto aqui é um risco, Bohr.",
+   "next": "escolha_final"
+  },
+  "ambush_01": {
+   "id": "ambush_01",
+   "speaker": "Bohr",
+   "text": "A gente já tem o suficiente: as pegadas, o tecido, o colar dela — junto com o que a Ana contou, isso fecha o quadro. Jhon, você vai pela direita.",
+   "next": "ambush_02"
+  },
+  "ambush_02": {
+   "id": "ambush_02",
+   "speaker": "Jhon",
+   "text": "Entendido. Eu distraio, você tira ele do caminho da porta. Na minha contagem.",
+   "next": "ambush_03"
+  },
+  "ambush_03": {
+   "id": "ambush_03",
+   "speaker": "Bohr",
+   "text": "Agora.",
+   "next": "ambush_04"
+  },
+  "ambush_04": {
+   "id": "ambush_04",
+   "speaker": "Rurik",
+   "text": "Tá bem, tá bem! Abaixa isso, eu não vou reagir!",
+   "next": "ambush_05"
+  },
+  "ambush_05": {
+   "id": "ambush_05",
+   "chars": [
+    {
+     "id": "bohr",
+     "pos": "left"
+    },
+    {
+     "id": "lorain",
+     "pos": "center"
+    },
+    {
+     "id": "jhon",
+     "pos": "right"
+    }
+   ],
+   "speaker": "Lorain",
+   "text": "Vocês... vieram mesmo. Eu já tinha desistido de esperar alguém.",
+   "next": "ambush_06"
+  },
+  "ambush_06": {
+   "id": "ambush_06",
+   "speaker": "Bohr",
+   "text": "A gente sempre aparece, srta. Lorain. Só demoramos um pouco pra achar o endereço certo.",
+   "next": "ambush_07"
+  },
+  "ambush_07": {
+   "id": "ambush_07",
+   "speaker": "Jhon",
+   "text": "Vamos tirar você daqui agora mesmo. Consegue andar até a vila?",
+   "next": "epilogo_01"
+  },
+  "epilogo_01": {
+   "id": "epilogo_01",
+   "bg": "vila",
+   "chars": [
+    {
+     "id": "bohr",
+     "pos": "left"
+    },
+    {
+     "id": "estevan",
+     "pos": "center"
+    },
+    {
+     "id": "jhon",
+     "pos": "right"
+    }
+   ],
+   "speaker": "Estevan",
+   "text": "Lorain... graças a Deus. Eu não teria palavras pra agradecer a vocês dois nem se tivesse a noite inteira.",
+   "next": "epilogo_02"
+  },
+  "epilogo_02": {
+   "id": "epilogo_02",
+   "speaker": "Bohr",
+   "text": "Guarde as palavras. Guarde a Lorain por perto, isso sim — e mande alguém recolher aquela armadilha na trilha norte antes que ela pegue outra pessoa.",
+   "next": "epilogo_03"
+  },
+  "epilogo_03": {
+   "id": "epilogo_03",
+   "speaker": "Jhon",
+   "text": "Caso encerrado, chefe?",
+   "next": "epilogo_04"
+  },
+  "epilogo_04": {
+   "id": "epilogo_04",
+   "speaker": "Bohr",
+   "text": "Caso encerrado, Jhon. Bora andando, antes que essa vila decida que gosta tanto da gente a ponto de não deixar a gente ir embora.",
+   "next": "ending_win"
+  },
+  "ending_win": {
+   "id": "ending_win",
+   "ending": "win",
+   "title": "Caso Encerrado",
+   "text": "Com provas sólidas e um plano frio na cabeça, Bohr e Jhon prendem Rurik e resgatam Lorain com vida. Mais um caso decifrado — e mais uma prova de que, na floresta ou na cidade, um bom detetive nunca trabalha sozinho."
+  }
+ }
+}
