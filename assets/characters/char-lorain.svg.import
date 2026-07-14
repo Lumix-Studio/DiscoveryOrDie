@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddjjonknjjdhm"
-path="res://.godot/imported/bg-vila.svg-5faa8c2c41f76644d24de3ea0093bc27.ctex"
+uid="uid://dkhmnnkn8rfbi"
+path="res://.godot/imported/char-lorain.svg-4ef9e8daa6da66e69ad86c36e352656c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bg-vila.svg"
-dest_files=["res://.godot/imported/bg-vila.svg-5faa8c2c41f76644d24de3ea0093bc27.ctex"]
+source_file="res://assets/characters/char-lorain.svg"
+dest_files=["res://.godot/imported/char-lorain.svg-4ef9e8daa6da66e69ad86c36e352656c.ctex"]
 
 [params]
 

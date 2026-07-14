@@ -18,8 +18,8 @@ func _ready() -> void:
 	await get_tree().process_frame
 	Game.state = Game.default_state()
 
-	var vn: Node = load("res://scenes/VNLayer.tscn").instantiate()
-	var invest: Node = load("res://scenes/InvestLayer.tscn").instantiate()
+	var vn: Node = load("res://src/ui/vn/vn_layer.tscn").instantiate()
+	var invest: Node = load("res://src/ui/invest/invest_layer.tscn").instantiate()
 	add_child(vn)
 	add_child(invest)
 	await get_tree().process_frame

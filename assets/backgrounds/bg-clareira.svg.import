@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkhmnnkn8rfbi"
-path="res://.godot/imported/char-lorain.svg-9cf6d23c8a2a484941b90ae8d349f63d.ctex"
+uid="uid://ckda4bgb0x16i"
+path="res://.godot/imported/bg-clareira.svg-2c77c5de32b43034c4d3d79c03c43310.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/char-lorain.svg"
-dest_files=["res://.godot/imported/char-lorain.svg-9cf6d23c8a2a484941b90ae8d349f63d.ctex"]
+source_file="res://assets/backgrounds/bg-clareira.svg"
+dest_files=["res://.godot/imported/bg-clareira.svg-2c77c5de32b43034c4d3d79c03c43310.ctex"]
 
 [params]
 

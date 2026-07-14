@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3]
 
-[ext_resource type="Script" path="res://scripts/vn/VNLayer.gd" id="1_vnlayer"]
-[ext_resource type="Script" path="res://scripts/vn/SceneBackground.gd" id="2_scenebg"]
-[ext_resource type="Script" path="res://scripts/vn/CharacterStage.gd" id="3_charstage"]
-[ext_resource type="Script" path="res://scripts/vn/DialogueBox.gd" id="4_dialoguebox"]
-[ext_resource type="Script" path="res://scripts/vn/ChoicesBox.gd" id="5_choicesbox"]
-[ext_resource type="Script" path="res://scripts/vn/EndingOverlay.gd" id="6_endingoverlay"]
+[ext_resource type="Script" path="res://src/ui/vn/vn_layer.gd" id="1_vnlayer"]
+[ext_resource type="Script" path="res://src/ui/vn/scene_background.gd" id="2_scenebg"]
+[ext_resource type="Script" path="res://src/ui/vn/character_stage.gd" id="3_charstage"]
+[ext_resource type="Script" path="res://src/ui/vn/dialogue_box.gd" id="4_dialoguebox"]
+[ext_resource type="Script" path="res://src/ui/vn/choices_box.gd" id="5_choicesbox"]
+[ext_resource type="Script" path="res://src/ui/vn/ending_overlay.gd" id="6_endingoverlay"]
 
 [sub_resource type="StyleBoxFlat" id="SBF_dialogue"]
 bg_color = Color(0.0509804, 0.0666667, 0.0901961, 0.92)

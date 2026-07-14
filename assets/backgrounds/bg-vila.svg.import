@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cad5428cw1kss"
-path="res://.godot/imported/bg-cabana.svg-11156124562538922e473a70f26b80c3.ctex"
+uid="uid://ddjjonknjjdhm"
+path="res://.godot/imported/bg-vila.svg-4b658d9060b21d14ad69c59d8f104f3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bg-cabana.svg"
-dest_files=["res://.godot/imported/bg-cabana.svg-11156124562538922e473a70f26b80c3.ctex"]
+source_file="res://assets/backgrounds/bg-vila.svg"
+dest_files=["res://.godot/imported/bg-vila.svg-4b658d9060b21d14ad69c59d8f104f3b.ctex"]
 
 [params]
 

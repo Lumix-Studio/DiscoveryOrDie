@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3bcn4m0yp1v6"
-path="res://.godot/imported/foto-clareira.svg-a39613ad9a8de24923a60adcb21dc33f.ctex"
+uid="uid://lpvql0ivknuw"
+path="res://.godot/imported/char-estevan.svg-54fe79a5e92ea11beeed2fdd3da3c76c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/foto-clareira.svg"
-dest_files=["res://.godot/imported/foto-clareira.svg-a39613ad9a8de24923a60adcb21dc33f.ctex"]
+source_file="res://assets/characters/char-estevan.svg"
+dest_files=["res://.godot/imported/char-estevan.svg-54fe79a5e92ea11beeed2fdd3da3c76c.ctex"]
 
 [params]
 

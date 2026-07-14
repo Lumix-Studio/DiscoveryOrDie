@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2lgduyj1v7yc"
-path="res://.godot/imported/char-rurik.svg-5e26451fd6ead5aef71fc9f5a037f970.ctex"
+uid="uid://dmqgu03ebhork"
+path="res://.godot/imported/char-ana.svg-d4b93aedbc36d63a1ae15c519f2b4024.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/char-rurik.svg"
-dest_files=["res://.godot/imported/char-rurik.svg-5e26451fd6ead5aef71fc9f5a037f970.ctex"]
+source_file="res://assets/characters/char-ana.svg"
+dest_files=["res://.godot/imported/char-ana.svg-d4b93aedbc36d63a1ae15c519f2b4024.ctex"]
 
 [params]
 

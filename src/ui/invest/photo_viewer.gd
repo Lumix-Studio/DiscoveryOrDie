@@ -12,7 +12,7 @@ const PHOTOS: Array = [
 	{
 		"id": "foto_clareira",
 		"title": "Foto da clareira",
-		"src": "res://assets/foto-clareira.svg",
+		"src": "res://assets/photos/foto-clareira.svg",
 		"clues": [
 			{
 				"id": "pegadas", "x": 300.0, "y": 640.0, "r": 100.0,

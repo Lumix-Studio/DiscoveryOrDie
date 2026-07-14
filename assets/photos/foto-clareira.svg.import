@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmqgu03ebhork"
-path="res://.godot/imported/char-ana.svg-fd6503b17aa2093a02f0e0a87ef8f46c.ctex"
+uid="uid://3bcn4m0yp1v6"
+path="res://.godot/imported/foto-clareira.svg-8ca81e393ab69d593d0fae6e8f301301.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/char-ana.svg"
-dest_files=["res://.godot/imported/char-ana.svg-fd6503b17aa2093a02f0e0a87ef8f46c.ctex"]
+source_file="res://assets/photos/foto-clareira.svg"
+dest_files=["res://.godot/imported/foto-clareira.svg-8ca81e393ab69d593d0fae6e8f301301.ctex"]
 
 [params]
 

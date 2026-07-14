@@ -2,8 +2,8 @@ extends Control
 ## Main.gd — boot: instancia as camadas em runtime (evita conflito de .tscn
 ## entre módulos) e inicia o roteiro do ponto salvo ou do começo.
 
-const VN_LAYER := "res://scenes/VNLayer.tscn"
-const INVEST_LAYER := "res://scenes/InvestLayer.tscn"
+const VN_LAYER := "res://src/ui/vn/vn_layer.tscn"
+const INVEST_LAYER := "res://src/ui/invest/invest_layer.tscn"
 
 func _ready() -> void:
 	var vn: Node = null

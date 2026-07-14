@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qfchfs0of2dw"
-path="res://.godot/imported/bg-trilha.svg-b374bb121b5f01dfc0aefe530a194964.ctex"
+uid="uid://iuh8bqlh0d3v"
+path="res://.godot/imported/char-bohr.svg-e37fc6292a53f4da611e478906ad518a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bg-trilha.svg"
-dest_files=["res://.godot/imported/bg-trilha.svg-b374bb121b5f01dfc0aefe530a194964.ctex"]
+source_file="res://assets/characters/char-bohr.svg"
+dest_files=["res://.godot/imported/char-bohr.svg-e37fc6292a53f4da611e478906ad518a.ctex"]
 
 [params]
 

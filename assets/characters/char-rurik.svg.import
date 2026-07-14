@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://du43wih562eri"
-path="res://.godot/imported/char-jhon.svg-ae13d49ec98080dff8ccbf729479791b.ctex"
+uid="uid://2lgduyj1v7yc"
+path="res://.godot/imported/char-rurik.svg-771ed62c8680fbf78ac622060199c69b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/char-jhon.svg"
-dest_files=["res://.godot/imported/char-jhon.svg-ae13d49ec98080dff8ccbf729479791b.ctex"]
+source_file="res://assets/characters/char-rurik.svg"
+dest_files=["res://.godot/imported/char-rurik.svg-771ed62c8680fbf78ac622060199c69b.ctex"]
 
 [params]
 

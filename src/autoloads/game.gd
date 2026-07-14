@@ -25,7 +25,7 @@ signal research_unlocked(term_id: String)
 signal photo_unlocked(photo_id: String)
 
 const SAVE_PATH := "user://dod-save.json"
-const SCRIPT_PATH := "res://data/script.json"
+const SCRIPT_PATH := "res://src/config/script.json"
 
 var state: Dictionary = {}
 var script_data: Dictionary = {}

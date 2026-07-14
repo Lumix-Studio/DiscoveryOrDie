@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://iuh8bqlh0d3v"
-path="res://.godot/imported/char-bohr.svg-f736b7746156c431420460e1bcd0fcb2.ctex"
+uid="uid://du43wih562eri"
+path="res://.godot/imported/char-jhon.svg-25fda79e47b1f53408339293bf73f976.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/char-bohr.svg"
-dest_files=["res://.godot/imported/char-bohr.svg-f736b7746156c431420460e1bcd0fcb2.ctex"]
+source_file="res://assets/characters/char-jhon.svg"
+dest_files=["res://.godot/imported/char-jhon.svg-25fda79e47b1f53408339293bf73f976.ctex"]
 
 [params]
 

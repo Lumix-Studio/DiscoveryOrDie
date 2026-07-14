@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckda4bgb0x16i"
-path="res://.godot/imported/bg-clareira.svg-f370536c47dc4c9dd4e281c23c5121f2.ctex"
+uid="uid://qfchfs0of2dw"
+path="res://.godot/imported/bg-trilha.svg-dd80bd1e1afae7dea5195abc66b022fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bg-clareira.svg"
-dest_files=["res://.godot/imported/bg-clareira.svg-f370536c47dc4c9dd4e281c23c5121f2.ctex"]
+source_file="res://assets/backgrounds/bg-trilha.svg"
+dest_files=["res://.godot/imported/bg-trilha.svg-dd80bd1e1afae7dea5195abc66b022fc.ctex"]
 
 [params]
 

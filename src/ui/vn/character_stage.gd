@@ -60,7 +60,7 @@ func _sync_chars(chars: Array) -> void:
 
 
 func _add_char(id: String, pos: String) -> void:
-	var tex_path := "res://assets/char-%s.svg" % id
+	var tex_path := "res://assets/characters/char-%s.svg" % id
 	if not ResourceLoader.exists(tex_path):
 		push_warning("CharacterStage: asset de personagem ausente -> %s" % tex_path)
 		return

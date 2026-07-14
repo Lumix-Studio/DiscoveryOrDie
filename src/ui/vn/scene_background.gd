@@ -15,7 +15,7 @@ var _tween: Tween
 func apply_bg(bg_name: String) -> void:
 	if bg_name.is_empty() or bg_name == current_bg:
 		return
-	var tex_path := "res://assets/bg-%s.svg" % bg_name
+	var tex_path := "res://assets/backgrounds/bg-%s.svg" % bg_name
 	if not ResourceLoader.exists(tex_path):
 		push_warning("SceneBackground: asset de fundo ausente -> %s" % tex_path)
 		return
