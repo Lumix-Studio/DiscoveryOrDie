@@ -80,5 +80,6 @@ res://
 | Brunelli | Minigames de investigação + interface |
 | Darlyson | Diálogos, personagens, ambientação, animação |
 | Veilcrus | Suporte aos dois |
-| Nicolas | Algumas artes de ui |
-| Bonie | Artes gerais |
+| Nicolas | Artes do background |
+| Bonie | Artes dos personagens |
+| Reynaldo| Artes das UI's |
