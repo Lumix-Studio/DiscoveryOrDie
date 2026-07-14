@@ -2,3 +2,6 @@
 *.log
 node_modules/
 .godot/
+
+# Config local do Claude Code (as skills do time são versionadas; settings locais não)
+.claude/settings.local.json
