@@ -77,9 +77,9 @@ res://
 
 | Quem | Área |
 |---|---|
-| Brunelli | Minigames de investigação + interface |
-| Darlyson | Diálogos, personagens, ambientação, animação |
-| Veilcrus | Suporte aos dois |
+| Brunelli | Minigames de investigação + interface e diálogos |
+| Darlyson | Menu principal + animação |
+| Veilcrus | Suporte aos dois, sistema de save, animaçõe (exeto a do menu ainicial) |
 | Nicolas | Artes do background |
 | Bonie | Artes dos personagens |
 | Reynaldo| Artes das UI's |
