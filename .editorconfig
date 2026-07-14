@@ -1,0 +1,23 @@
+# Padrão de edição — Lumix Studio / Godot
+# https://editorconfig.org
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = tab
+indent_size = 4
+
+# GDScript e recursos do Godot usam TAB (convenção oficial da engine)
+[*.{gd,tscn,tres,godot,import}]
+indent_style = tab
+
+# Formatos de texto/config usam espaço
+[*.{md,json,yml,yaml,cfg,svg}]
+indent_style = space
+indent_size = 2
+
+[*.md]
+trim_trailing_whitespace = false

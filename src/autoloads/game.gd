@@ -4,7 +4,7 @@ extends Node
 ## Toda mutação de estado passa por aqui e emite sinais; as camadas de UI
 ## (VNLayer, InvestLayer) apenas reagem aos sinais e leem `state`.
 ##
-## Roteiro: `script_data` = data/script.json → { "startNode": String, "nodes": {...} }
+## Roteiro: `script_data` = src/config/script.json → { "startNode": String, "nodes": {...} }
 ## Nó: { id, bg?, chars?: [{id, pos}], speaker?, text?, next?,
 ##       choices?: [{text, next, if?}], actions?: [[tipo, ...args]],
 ##       ending?: "win"|"lose", title? }

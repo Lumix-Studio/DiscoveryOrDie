@@ -2,7 +2,7 @@ extends Control
 ## CharacterStage.gd — camada de personagens em cena
 ## (porte de #char-layer / applyChars+applyHighlight em js/vn.js).
 ##
-## Cada personagem em cena é um TextureRect (assets/char-<id>.svg), alinhado
+## Cada personagem em cena é um TextureRect (assets/characters/char-<id>.svg), alinhado
 ## na base, nas posições left/center/right. Entrada e saída usam fade; quem
 ## fala fica em destaque (modulate normal), os demais escurecidos; se o
 ## speaker não está em cena, todos ficam num tom neutro.

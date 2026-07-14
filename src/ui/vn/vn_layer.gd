@@ -1,8 +1,8 @@
 extends Control
 ## VNLayer.gd — raiz do núcleo de Visual Novel (porte de js/vn.js).
 ##
-## Consome Game.script_data (data/script.json, mesmo formato de
-## js/script-data.js) e o contrato Game.* (scripts/Game.gd — NÃO MODIFICADO).
+## Consome Game.script_data (src/config/script.json, mesmo formato de
+## js/script-data.js) e o contrato Game.* (src/autoloads/game.gd — NÃO MODIFICADO).
 ## Main.gd instancia esta cena em runtime e chama start(node_id).
 ##
 ## Orquestra os módulos-filho (cada um só cuida da própria apresentação):
