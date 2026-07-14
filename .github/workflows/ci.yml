@@ -1,0 +1,51 @@
+name: CI
+
+# Mantém o padrão da Lumix Studio a cada push/PR: roda a suíte headless
+# (smoke de integração + validação da estrutura de pastas) e valida as
+# mensagens de commit.
+
+on:
+  push:
+    branches: [dev, main]
+  pull_request:
+    branches: [dev, main]
+
+env:
+  GODOT_VERSION: 4.6-stable
+
+jobs:
+  testes:
+    name: Testes headless (integração + padrão Lumix)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar Godot ${{ env.GODOT_VERSION }}
+        run: |
+          set -e
+          BIN="Godot_v${GODOT_VERSION}_linux.x86_64"
+          wget -qO godot.zip "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}/${BIN}.zip"
+          unzip -q godot.zip
+          sudo mv "${BIN}" /usr/local/bin/godot
+          sudo chmod +x /usr/local/bin/godot
+          godot --version
+
+      - name: Importar recursos
+        run: godot --headless --import --path . || true
+
+      - name: Rodar suíte de testes
+        run: godot --headless --path . res://test/test_suite.tscn
+
+  padrao-de-commits:
+    name: Padrão de commits (Lumix)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Validar mensagens de commit
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BEFORE_SHA: ${{ github.event.before }}
+          BASE_REF: ${{ github.base_ref }}
+        run: bash .github/scripts/check-commits.sh

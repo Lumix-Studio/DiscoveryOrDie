@@ -2,7 +2,9 @@ extends Node
 ## Smoke de integração headless:
 ##   /Applications/Godot.app/Contents/MacOS/Godot --headless --path . res://test/smoke.tscn
 ## Instancia as duas camadas de verdade e dirige o roteiro pelo VN.
+## Também roda dentro de test_suite.tscn (com autorun=false → sem quit próprio).
 
+@export var autorun := true
 var fails := 0
 var checks := 0
 
@@ -15,6 +17,13 @@ func ok(cond: bool, msg: String) -> void:
 		printerr("  ✗ FAIL: ", msg)
 
 func _ready() -> void:
+	if not autorun:
+		return
+	await run()
+	print("\n%d/%d asserts OK" % [checks - fails, checks])
+	get_tree().quit(1 if fails > 0 else 0)
+
+func run() -> void:
 	await get_tree().process_frame
 	Game.state = Game.default_state()
 
@@ -72,9 +81,6 @@ func _ready() -> void:
 	# limpa o save gerado pelo teste
 	if FileAccess.file_exists(Game.SAVE_PATH):
 		DirAccess.remove_absolute(Game.SAVE_PATH)
-
-	print("\n%d/%d asserts OK" % [checks - fails, checks])
-	get_tree().quit(1 if fails > 0 else 0)
 
 func _has_task(id: String) -> bool:
 	for t in Game.state.tasks:

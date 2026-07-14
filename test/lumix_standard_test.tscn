@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://test/lumix_standard_test.gd" id="1_lumix"]
+
+[node name="LumixStandardTest" type="Node"]
+script = ExtResource("1_lumix")
