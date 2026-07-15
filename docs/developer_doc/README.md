@@ -10,6 +10,8 @@ sua API pública e como integrar** — com o nome de quem o desenvolveu.
 | Autoload `Game` (contrato de estado) | [`game_autoload.md`](game_autoload.md) | `src/autoloads/game.gd` | Brunelli |
 | Visual Novel (diálogo, cenas, escolhas) | [`vn_system.md`](vn_system.md) | `src/ui/vn/` | Darlyson (design) · porte Godot: Brunelli |
 | Investigação (HUD, painéis, minigames) | [`invest_system.md`](invest_system.md) | `src/ui/invest/` | Brunelli |
+| Sistema de save (Sistema em objeto) | [`save_system.gd`](/src/system/save/save_system.gd) | `src/system/save/save_system.gd` | VeilCruss |
+| Modelo de save (migração de JSON para Resource) | [`save_pattern.gd`](/src/system/save/save_pattern.gd) | `src/system/save/save_pattern.gd` | Veilcruss |
 
 > **Regra de ouro:** `Game` (autoload) é o **contrato** entre módulos. Toda
 > mutação de estado passa por ele e emite sinais; as camadas de UI só reagem aos
