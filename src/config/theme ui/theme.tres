@@ -1,0 +1,35 @@
+[gd_resource type="Theme" format=3 uid="uid://eocbir08at3y"]
+
+[ext_resource type="FontFile" uid="uid://blidbhod7okjh" path="res://src/config/fonts/recoleta/Recoleta-RegularDEMO.otf" id="1_yfspo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c2med"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_racw3"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_right = 11
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gc4fq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sdtv6"]
+bg_color = Color(0.6745098, 0.60784316, 0.08235294, 0)
+border_width_bottom = 6
+border_blend = true
+
+[resource]
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("1_yfspo")
+Button/styles/focus = SubResource("StyleBoxFlat_c2med")
+Button/styles/hover = SubResource("StyleBoxFlat_racw3")
+Button/styles/normal = SubResource("StyleBoxFlat_gc4fq")
+Button/styles/pressed = SubResource("StyleBoxFlat_sdtv6")
