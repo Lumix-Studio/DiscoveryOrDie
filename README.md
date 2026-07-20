@@ -79,7 +79,7 @@ res://
 |---|---|
 | Brunelli | Minigames de investigação + interface e diálogos |
 | Darlyson | Menu principal + animação |
-| Veilcrus | Suporte aos dois, sistema de save, animaçõe (exeto a do menu ainicial) |
+| Veilcrus | Suporte aos dois, sistema de save, animaçõe (exeto a do menu prinicial) |
 | Nicolas | Artes do background |
 | Bonie | Artes dos personagens |
 | Reynaldo| Artes das UI's |
