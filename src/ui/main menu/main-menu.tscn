@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://7unfcayf8fcv"]
 
 [ext_resource type="Texture2D" uid="uid://qfchfs0of2dw" path="res://assets/backgrounds/bg-trilha.svg" id="1_fvffa"]
+[ext_resource type="Script" uid="uid://keks0f6cr1ud" path="res://src/autoloads/main menu/main_menu.gd" id="1_racw3"]
 [ext_resource type="FontFile" uid="uid://blidbhod7okjh" path="res://src/config/fonts/recoleta/Recoleta-RegularDEMO.otf" id="2_trv5n"]
 [ext_resource type="FontFile" uid="uid://dtq7ngs2akvo3" path="res://src/config/fonts/agatho/Agatho_ BoldCAPS.otf" id="3_trv5n"]
 [ext_resource type="Theme" uid="uid://eocbir08at3y" path="res://src/config/theme ui/theme.tres" id="4_c2med"]
@@ -15,9 +16,84 @@ shader_parameter/density = 0.5
 
 [sub_resource type="QuadMesh" id="QuadMesh_k0dnv"]
 
+[sub_resource type="Animation" id="Animation_t2ne6"]
+resource_name = "In"
+length = 2.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Black fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.0333333),
+"transitions": PackedFloat32Array(0.48296818, 0.6),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Center Layar/Play:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.0333333),
+"transitions": PackedFloat32Array(0.35, 0.34151003),
+"update": 0,
+"values": [Vector2(1921, 470), Vector2(1667, 470)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Center Layar/Settings:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.0333333),
+"transitions": PackedFloat32Array(0.48296815, 0.36602136),
+"update": 0,
+"values": [Vector2(1921, 639), Vector2(1667, 639)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Center Layar/Quit:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.0333333),
+"transitions": PackedFloat32Array(0.59460354, 1),
+"update": 0,
+"values": [Vector2(1916, 817), Vector2(1669, 817)]
+}
+
+[sub_resource type="Animation" id="Animation_yorvf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Black fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k0dnv"]
+_data = {
+&"In": SubResource("Animation_t2ne6"),
+&"RESET": SubResource("Animation_yorvf")
+}
+
 [node name="MainMenu" type="Node2D" unique_id=1868828962]
+script = ExtResource("1_racw3")
 
 [node name="Backgrund Layar" type="CanvasLayer" parent="." unique_id=1086562850]
+layer = 0
 
 [node name="Backgrund" type="Sprite2D" parent="Backgrund Layar" unique_id=1858110853]
 position = Vector2(961, 540)
@@ -36,9 +112,9 @@ vertical_alignment = 1
 [node name="Center Layar" type="CanvasLayer" parent="." unique_id=438436252]
 
 [node name="Play" type="Button" parent="Center Layar" unique_id=1025987328]
-offset_left = 1667.0
+offset_left = 1921.0
 offset_top = 470.0
-offset_right = 1919.0
+offset_right = 2172.9966
 offset_bottom = 575.0
 theme = ExtResource("4_c2med")
 theme_override_fonts/font = ExtResource("3_trv5n")
@@ -46,9 +122,9 @@ theme_override_font_sizes/font_size = 50
 text = "Play"
 
 [node name="Settings" type="Button" parent="Center Layar" unique_id=738847386]
-offset_left = 1667.0
+offset_left = 1921.0
 offset_top = 639.0
-offset_right = 1919.0
+offset_right = 2172.999
 offset_bottom = 743.0
 theme = ExtResource("4_c2med")
 theme_override_fonts/font = ExtResource("3_trv5n")
@@ -56,9 +132,9 @@ theme_override_font_sizes/font_size = 50
 text = "Settings"
 
 [node name="Quit" type="Button" parent="Center Layar" unique_id=2043582001]
-offset_left = 1671.0
+offset_left = 1916.0
 offset_top = 817.0
-offset_right = 1923.0
+offset_right = 2168.0012
 offset_bottom = 921.0
 theme = ExtResource("4_c2med")
 theme_override_fonts/font = ExtResource("3_trv5n")
@@ -66,6 +142,7 @@ theme_override_font_sizes/font_size = 50
 text = "Quit"
 
 [node name="Top Layar" type="CanvasLayer" parent="." unique_id=441007220]
+layer = 2
 
 [node name="Smoke" type="MeshInstance2D" parent="Top Layar" unique_id=556143214]
 material = SubResource("ShaderMaterial_racw3")
@@ -77,3 +154,13 @@ metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Top Layar" unique_id=1684676923]
+libraries/ = SubResource("AnimationLibrary_k0dnv")
+
+[node name="Black fade" type="ColorRect" parent="Top Layar" unique_id=1199516207]
+visible = false
+offset_right = 1928.0
+offset_bottom = 1088.0
+color = Color(0, 0, 0, 1)
+
+[connection signal="focus_exited" from="Center Layar/Play" to="." method="_on_play_focus_exited"]
+[connection signal="focus_entered" from="Center Layar/Settings" to="." method="_on_settings_focus_entered"]
