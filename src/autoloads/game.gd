@@ -51,22 +51,24 @@ func default_state() -> Dictionary:
 	}
 # ------------------------------------------------------------------ Conversão de dicionario
 
-func disassemble_dictionary(state:Dictionary) -> SavePattern:
+func disassemble_dictionary(local_state:Dictionary) -> SavePattern:
 	var memory_resource:SavePattern = SavePattern.new()
-	for variable in state.keys():
-		memory_resource.set(variable, state[variable])
+	for variable in local_state.keys():
+		memory_resource.set(variable, local_state[variable])
 	return memory_resource
 
-func assemble_dictionary(state:SavePattern) -> Dictionary:
+func assemble_dictionary(local_state:SavePattern) -> Dictionary:
 	var memory_dictionary:Dictionary = default_state()
-	for variable in state.get_property_list():
+	for variable in local_state.get_property_list():
 		if variable.name in memory_dictionary:
-			memory_dictionary[variable.name] = state.get(variable.name)	
+			memory_dictionary[variable.name] = local_state.get(variable.name)	
 	return memory_dictionary
 
 # ------------------------------------------------------------------ save/load
 
 func save() -> void:
+	var test = UnitTestSave.new()
+	test.test_disassemble_dictionary(state)
 	var save_method:SaveSystem = SaveSystem.new()
 	var resource_save:SavePattern = disassemble_dictionary(state)
 	save_method.save_resource(resource_save, SAVE_PATH)
