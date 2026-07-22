@@ -16,30 +16,17 @@ Abrir a pasta do projeto no **Godot 4.6** e apertar F5, ou:
 /Applications/Godot.app/Contents/MacOS/Godot --path .
 ```
 
-## Testar os sistemas de investigação (parte do Brunelli)
+## Sistemas do Darlyson:
 
-Aperte **D** dentro do jogo (ou o botão 🛠 no topo) → painel dev com atalhos para testar cada sistema sem jogar a história:
+Em: ```res://src/ui/main menu/main-menu.tscn``` tem o menu principal do DoD project.
+Estou testando algumas coisas para a melhor experiencia de usuário
 
-- **TASKs** 📋 — lista de tarefas com notificações e badge
-- **Pesquisa** 🔎 — busca por termos descobertos na investigação
-- **Análise de fotos** 📷 — minigame de zoom/pan e pistas escondidas
-- **Caderno** 📓 — evidências coletadas
-
-Checklist de teste completo: [`docs/BRUNELLI-SISTEMAS.md`](docs/BRUNELLI-SISTEMAS.md).
-
-## Testes automatizados
-
-Rodam no Godot **headless** (mesma suíte que o CI executa a cada push/PR):
-
-```bash
-# suíte completa (smoke de integração + validação do padrão Lumix)
-/Applications/Godot.app/Contents/MacOS/Godot --headless --path . res://test/test_suite.tscn
-
-# só o smoke de integração
-/Applications/Godot.app/Contents/MacOS/Godot --headless --path . res://test/smoke.tscn
-```
-
-Saída com `exit code 0` = tudo verde; `≠ 0` = falha (o CI barra o merge).
+### O que estou fazendo?
+	* Sistemas de animações dinâmicas:
+	Esfou fazendo animações de fade in, out e etc. Para uma melhor experiencia de usuário.
+	
+	* Névoa dinamica:
+	Estou planejando um sistema de névoa baseada em shaders, que facilitará os visuais do jogo: Com uma atmosferá nais imersiva.
 
 ## Estrutura (padrão Lumix Studio)
 

@@ -68,6 +68,36 @@ tracks/3/keys = {
 "values": [Vector2(1916, 817), Vector2(1669, 817)]
 }
 
+[sub_resource type="Animation" id="Animation_racw3"]
+resource_name = "Play_animation_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Center Layar/Play:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.35, 0.5),
+"update": 0,
+"values": [Vector2(1667, 470), Vector2(1602, 470)]
+}
+
+[sub_resource type="Animation" id="Animation_k0dnv"]
+resource_name = "Play_animation_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Center Layar/Play:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.35, 0.5),
+"update": 0,
+"values": [Vector2(1602, 470), Vector2(1666, 470)]
+}
+
 [sub_resource type="Animation" id="Animation_yorvf"]
 length = 0.001
 tracks/0/type = "value"
@@ -82,11 +112,69 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(0, 0, 0, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Center Layar/Play:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1667, 470)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Center Layar/Settings:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1667, 639)]
+}
+
+[sub_resource type="Animation" id="Animation_dr128"]
+resource_name = "Setings_animation_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Center Layar/Settings:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.35, 0.5),
+"update": 0,
+"values": [Vector2(1667, 639), Vector2(1600, 639)]
+}
+
+[sub_resource type="Animation" id="Animation_jgy8v"]
+resource_name = "Settings_animation_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Center Layar/Settings:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.35, 0.5),
+"update": 0,
+"values": [Vector2(1600, 639), Vector2(1667, 639)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k0dnv"]
 _data = {
 &"In": SubResource("Animation_t2ne6"),
-&"RESET": SubResource("Animation_yorvf")
+&"Play_animation_in": SubResource("Animation_racw3"),
+&"Play_animation_out": SubResource("Animation_k0dnv"),
+&"RESET": SubResource("Animation_yorvf"),
+&"Setings_animation_in": SubResource("Animation_dr128"),
+&"Settings_animation_out": SubResource("Animation_jgy8v")
 }
 
 [node name="MainMenu" type="Node2D" unique_id=1868828962]
@@ -112,19 +200,41 @@ vertical_alignment = 1
 [node name="Center Layar" type="CanvasLayer" parent="." unique_id=438436252]
 
 [node name="Play" type="Button" parent="Center Layar" unique_id=1025987328]
-offset_left = 1921.0
+offset_left = 1667.0
 offset_top = 470.0
-offset_right = 2172.9966
+offset_right = 1918.9966
 offset_bottom = 575.0
 theme = ExtResource("4_c2med")
 theme_override_fonts/font = ExtResource("3_trv5n")
 theme_override_font_sizes/font_size = 50
 text = "Play"
 
+[node name="Label" type="Label" parent="Center Layar/Play" unique_id=1449545157]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8375
+anchor_top = 0.44444445
+anchor_right = 0.8625
+anchor_bottom = 0.51203704
+offset_left = -270.04712
+offset_top = -36.666668
+offset_right = -246.34706
+offset_bottom = 29.23611
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme = ExtResource("4_c2med")
+theme_override_font_sizes/font_size = 53
+text = ">"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="Settings" type="Button" parent="Center Layar" unique_id=738847386]
-offset_left = 1921.0
+offset_left = 1667.0
 offset_top = 639.0
-offset_right = 2172.999
+offset_right = 1918.999
 offset_bottom = 743.0
 theme = ExtResource("4_c2med")
 theme_override_fonts/font = ExtResource("3_trv5n")
@@ -145,6 +255,7 @@ text = "Quit"
 layer = 2
 
 [node name="Smoke" type="MeshInstance2D" parent="Top Layar" unique_id=556143214]
+visible = false
 material = SubResource("ShaderMaterial_racw3")
 position = Vector2(962.0759, 538.4102)
 rotation = -1.5707964
@@ -162,5 +273,9 @@ offset_right = 1928.0
 offset_bottom = 1088.0
 color = Color(0, 0, 0, 1)
 
-[connection signal="focus_exited" from="Center Layar/Play" to="." method="_on_play_focus_exited"]
-[connection signal="focus_entered" from="Center Layar/Settings" to="." method="_on_settings_focus_entered"]
+[connection signal="mouse_entered" from="Center Layar/Play" to="." method="_on_play_mouse_entered"]
+[connection signal="mouse_exited" from="Center Layar/Play" to="." method="_on_play_mouse_exited"]
+[connection signal="mouse_entered" from="Center Layar/Settings" to="." method="_on_settings_mouse_entered"]
+[connection signal="mouse_exited" from="Center Layar/Settings" to="." method="_on_settings_mouse_exited"]
+[connection signal="mouse_entered" from="Center Layar/Quit" to="." method="_on_quit_mouse_entered"]
+[connection signal="mouse_exited" from="Center Layar/Quit" to="." method="_on_quit_mouse_exited"]
