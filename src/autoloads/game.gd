@@ -24,7 +24,7 @@ signal evidence_added(ev: Dictionary)
 signal research_unlocked(term_id: String)
 signal photo_unlocked(photo_id: String)
 
-const SAVE_PATH := "user://dod-save.json"
+const SAVE_PATH := "user://dod-save.tres"
 const SCRIPT_PATH := "res://src/config/script.json"
 
 var state: Dictionary = {}
@@ -49,26 +49,35 @@ func default_state() -> Dictionary:
 		"photos": [],         # ids de fotos desbloqueadas
 		"found_clues": {},    # photo_id -> [clue_ids]
 	}
+# ------------------------------------------------------------------ Conversão de dicionario
+
+func disassemble_dictionary(local_state:Dictionary) -> SavePattern:
+	var memory_resource:SavePattern = SavePattern.new()
+	for variable in local_state.keys():
+		memory_resource.set(variable, local_state[variable])
+	return memory_resource
+
+func assemble_dictionary(local_state:SavePattern) -> Dictionary:
+	var memory_dictionary:Dictionary = default_state()
+	for variable in local_state.get_property_list():
+		if variable.name in memory_dictionary:
+			memory_dictionary[variable.name] = local_state.get(variable.name)	
+	return memory_dictionary
 
 # ------------------------------------------------------------------ save/load
 
 func save() -> void:
-	var f := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
-	if f:
-		f.store_string(JSON.stringify(state))
+	var test = UnitTestSave.new()
+	test.test_disassemble_dictionary(state)
+	var save_method:SaveSystem = SaveSystem.new()
+	var resource_save:SavePattern = disassemble_dictionary(state)
+	save_method.save_resource(resource_save, SAVE_PATH)
 
-func load_save() -> bool:
-	state = default_state()
-	if not FileAccess.file_exists(SAVE_PATH):
-		return false
-	var f := FileAccess.open(SAVE_PATH, FileAccess.READ)
-	if f == null:
-		return false
-	var parsed: Variant = JSON.parse_string(f.get_as_text())
-	if parsed is Dictionary:
-		state.merge(parsed, true)
-		return true
-	return false
+func load_save() -> void:
+	var save_method:SaveSystem = SaveSystem.new()
+	var resource_save:SavePattern = save_method.load_resource(SAVE_PATH)
+	state = assemble_dictionary(resource_save)
+
 
 func reset() -> void:
 	if FileAccess.file_exists(SAVE_PATH):
