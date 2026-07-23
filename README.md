@@ -14,10 +14,10 @@ Em: ```res://src/ui/main menu/main-menu.tscn``` tem o menu principal do DoD proj
 Estou testando algumas coisas para a melhor experiencia de usuário
 
 ### O que estou fazendo?
-	* Sistemas de animações dinâmicas:
-	Esfou fazendo animações de fade in, out e etc. Para uma melhor experiencia de usuário.
+* Sistemas de animações dinâmicas:
+	Estou fazendo animações de fade in, out e etc. Para uma melhor experiencia de usuário.
 	
-	* Névoa dinamica:
+* Névoa dinamica:
 	Estou planejando um sistema de névoa baseada em shaders, que facilitará os visuais do jogo: Com uma atmosferá nais imersiva.
 
 ## Estrutura (padrão Lumix Studio)
