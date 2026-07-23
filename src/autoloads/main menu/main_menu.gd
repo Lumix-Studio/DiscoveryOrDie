@@ -34,12 +34,22 @@ func _on_settings_mouse_exited() -> void:
 # Animações no boão Settings
 
 func _on_quit_mouse_entered() -> void:
-	pass # Replace with function body.
+	animation_playar.play("Quit_animation_in")
 
 func _on_quit_mouse_exited() -> void:
-	pass # Replace with function body.
+	if animation_playar.is_playing():
+		await animation_playar.animation_finished
+		animation_playar.play("Settings_animation_out")
+	else:
+		animation_playar.play("Quit_animation_out")
 
 
 # Lógica dos botões
+func _on_play_pressed():
+	get_tree().change_scene_to_file("res://src/main.tscn")
 
-# Código aqui!
+func _on_settings_pressed():
+	pass # Replace with function body.
+
+func _on_quit_pressed():
+	get_tree().quit()

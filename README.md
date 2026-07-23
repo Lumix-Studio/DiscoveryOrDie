@@ -8,14 +8,6 @@ Visual novel de detetive. Você é **Bohr Holmes**, detetive particular, investi
 > ([`lumix-docs`](https://github.com/Lumix-Studio/lumix-docs)): estrutura de
 > pastas, commits e documentação. Detalhes em [`CLAUDE.md`](CLAUDE.md).
 
-## Rodar
-
-Abrir a pasta do projeto no **Godot 4.6** e apertar F5, ou:
-
-```bash
-/Applications/Godot.app/Contents/MacOS/Godot --path .
-```
-
 ## Sistemas do Darlyson:
 
 Em: ```res://src/ui/main menu/main-menu.tscn``` tem o menu principal do DoD project.
@@ -56,7 +48,6 @@ res://
 
 - [`docs/developer_doc/`](docs/developer_doc/) — **doc técnica por sistema** (padrão Lumix)
 - [`docs/PLANO.md`](docs/PLANO.md) — plano de desenvolvimento, arquitetura, etapas
-- [`docs/BRUNELLI-SISTEMAS.md`](docs/BRUNELLI-SISTEMAS.md) — spec dos sistemas de investigação
 - `docs/Discovery or Die (DoD) — GDD.docx` — GDD original (texto em `docs/gdd-extracted.txt`)
 - [`CLAUDE.md`](CLAUDE.md) — guia do repositório + padrões da Lumix para IA/devs
 

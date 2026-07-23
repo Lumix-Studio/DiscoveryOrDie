@@ -27,7 +27,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 2.0333333),
-"transitions": PackedFloat32Array(0.48296818, 0.6),
+"transitions": PackedFloat32Array(0.35, 0.5),
 "update": 0,
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
 }
@@ -68,6 +68,22 @@ tracks/3/keys = {
 "values": [Vector2(1916, 817), Vector2(1669, 817)]
 }
 
+[sub_resource type="Animation" id="Animation_3kfr0"]
+resource_name = "Out"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Black fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0.35, 0.5),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_racw3"]
 resource_name = "Play_animation_in"
 tracks/0/type = "value"
@@ -96,6 +112,36 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(0.35, 0.5),
 "update": 0,
 "values": [Vector2(1602, 470), Vector2(1666, 470)]
+}
+
+[sub_resource type="Animation" id="Animation_upxag"]
+resource_name = "Quit_animation_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Center Layar/Quit:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.35, 0.5),
+"update": 0,
+"values": [Vector2(1669, 817), Vector2(1602, 817)]
+}
+
+[sub_resource type="Animation" id="Animation_bq07x"]
+resource_name = "Quit_animation_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Center Layar/Quit:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.35, 0.5),
+"update": 0,
+"values": [Vector2(1602, 817), Vector2(1664, 817)]
 }
 
 [sub_resource type="Animation" id="Animation_yorvf"]
@@ -136,6 +182,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector2(1667, 639)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Center Layar/Quit:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1916, 817)]
+}
 
 [sub_resource type="Animation" id="Animation_dr128"]
 resource_name = "Setings_animation_in"
@@ -170,8 +228,11 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k0dnv"]
 _data = {
 &"In": SubResource("Animation_t2ne6"),
+&"Out": SubResource("Animation_3kfr0"),
 &"Play_animation_in": SubResource("Animation_racw3"),
 &"Play_animation_out": SubResource("Animation_k0dnv"),
+&"Quit_animation_in": SubResource("Animation_upxag"),
+&"Quit_animation_out": SubResource("Animation_bq07x"),
 &"RESET": SubResource("Animation_yorvf"),
 &"Setings_animation_in": SubResource("Animation_dr128"),
 &"Settings_animation_out": SubResource("Animation_jgy8v")
@@ -202,7 +263,7 @@ vertical_alignment = 1
 [node name="Play" type="Button" parent="Center Layar" unique_id=1025987328]
 offset_left = 1667.0
 offset_top = 470.0
-offset_right = 1918.9966
+offset_right = 1918.9979
 offset_bottom = 575.0
 theme = ExtResource("4_c2med")
 theme_override_fonts/font = ExtResource("3_trv5n")
@@ -234,7 +295,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Settings" type="Button" parent="Center Layar" unique_id=738847386]
 offset_left = 1667.0
 offset_top = 639.0
-offset_right = 1918.999
+offset_right = 1918.9988
 offset_bottom = 743.0
 theme = ExtResource("4_c2med")
 theme_override_fonts/font = ExtResource("3_trv5n")
@@ -244,7 +305,7 @@ text = "Settings"
 [node name="Quit" type="Button" parent="Center Layar" unique_id=2043582001]
 offset_left = 1916.0
 offset_top = 817.0
-offset_right = 2168.0012
+offset_right = 2168.001
 offset_bottom = 921.0
 theme = ExtResource("4_c2med")
 theme_override_fonts/font = ExtResource("3_trv5n")
@@ -255,7 +316,6 @@ text = "Quit"
 layer = 2
 
 [node name="Smoke" type="MeshInstance2D" parent="Top Layar" unique_id=556143214]
-visible = false
 material = SubResource("ShaderMaterial_racw3")
 position = Vector2(962.0759, 538.4102)
 rotation = -1.5707964
@@ -268,14 +328,16 @@ metadata/_edit_lock_ = true
 libraries/ = SubResource("AnimationLibrary_k0dnv")
 
 [node name="Black fade" type="ColorRect" parent="Top Layar" unique_id=1199516207]
-visible = false
 offset_right = 1928.0
 offset_bottom = 1088.0
 color = Color(0, 0, 0, 1)
 
 [connection signal="mouse_entered" from="Center Layar/Play" to="." method="_on_play_mouse_entered"]
 [connection signal="mouse_exited" from="Center Layar/Play" to="." method="_on_play_mouse_exited"]
+[connection signal="pressed" from="Center Layar/Play" to="." method="_on_play_pressed"]
 [connection signal="mouse_entered" from="Center Layar/Settings" to="." method="_on_settings_mouse_entered"]
 [connection signal="mouse_exited" from="Center Layar/Settings" to="." method="_on_settings_mouse_exited"]
+[connection signal="pressed" from="Center Layar/Settings" to="." method="_on_settings_pressed"]
 [connection signal="mouse_entered" from="Center Layar/Quit" to="." method="_on_quit_mouse_entered"]
 [connection signal="mouse_exited" from="Center Layar/Quit" to="." method="_on_quit_mouse_exited"]
+[connection signal="pressed" from="Center Layar/Quit" to="." method="_on_quit_pressed"]
