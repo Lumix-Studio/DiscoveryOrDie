@@ -5,67 +5,223 @@
 [ext_resource type="FontFile" uid="uid://blidbhod7okjh" path="res://src/config/fonts/recoleta/Recoleta-RegularDEMO.otf" id="2_trv5n"]
 [ext_resource type="FontFile" uid="uid://dtq7ngs2akvo3" path="res://src/config/fonts/agatho/Agatho_ BoldCAPS.otf" id="3_trv5n"]
 [ext_resource type="Theme" uid="uid://eocbir08at3y" path="res://src/config/theme ui/theme.tres" id="4_c2med"]
-[ext_resource type="Shader" uid="uid://ppy1he4lu52a" path="res://src/autoloads/smoke/smoke.gdshader" id="5_c2med"]
+[ext_resource type="Shader" uid="uid://ppy1he4lu52a" path="res://src/autoloads/fog/fog.gdshader" id="5_c2med"]
+[ext_resource type="Script" uid="uid://mynlqepjhenk" path="res://src/autoloads/button/button_animnated.gd" id="6_t2ne6"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_racw3"]
-shader = ExtResource("5_c2med")
-shader_parameter/smoke_color = Color(0.8, 0.8, 0.8, 1)
-shader_parameter/speed = 0.05
-shader_parameter/scale = 4.0
-shader_parameter/density = 0.5
-
-[sub_resource type="QuadMesh" id="QuadMesh_k0dnv"]
-
-[sub_resource type="Animation" id="Animation_t2ne6"]
-resource_name = "In"
-length = 2.0333333
+[sub_resource type="Animation" id="Animation_racw3"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Black fade:color")
+tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.0333333),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1667, 470)]
+}
+
+[sub_resource type="Animation" id="Animation_k0dnv"]
+resource_name = "hover_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(0.35, 0.5),
+"update": 0,
+"values": [Vector2(1667, 470), Vector2(1601, 470)]
+}
+
+[sub_resource type="Animation" id="Animation_dr128"]
+resource_name = "hover_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.35, 0.5),
+"update": 0,
+"values": [Vector2(1601, 470), Vector2(1668, 470)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jgy8v"]
+_data = {
+&"RESET": SubResource("Animation_racw3"),
+&"hover_in": SubResource("Animation_k0dnv"),
+&"hover_out": SubResource("Animation_dr128")
+}
+
+[sub_resource type="Animation" id="Animation_upxag"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Settings:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1667, 639)]
+}
+
+[sub_resource type="Animation" id="Animation_bq07x"]
+resource_name = "hover_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Settings:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.35, 0.5),
+"update": 0,
+"values": [Vector2(1667, 639), Vector2(1600, 639)]
+}
+
+[sub_resource type="Animation" id="Animation_tt5wp"]
+resource_name = "hover_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Settings:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.35, 0.5),
+"update": 0,
+"values": [Vector2(1600, 639), Vector2(1668, 639)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lfwrr"]
+_data = {
+&"RESET": SubResource("Animation_upxag"),
+&"hover_in": SubResource("Animation_bq07x"),
+&"hover_out": SubResource("Animation_tt5wp")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c2med"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_racw3"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_right = 11
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gc4fq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sdtv6"]
+bg_color = Color(0.6745098, 0.60784316, 0.08235294, 0)
+border_width_bottom = 6
+border_blend = true
+
+[sub_resource type="Theme" id="Theme_t2ne6"]
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("2_trv5n")
+Button/styles/focus = SubResource("StyleBoxFlat_c2med")
+Button/styles/hover = SubResource("StyleBoxFlat_racw3")
+Button/styles/normal = SubResource("StyleBoxFlat_gc4fq")
+Button/styles/pressed = SubResource("StyleBoxFlat_sdtv6")
+
+[sub_resource type="Animation" id="Animation_lfwrr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1669, 817)]
+}
+
+[sub_resource type="Animation" id="Animation_jgy8v"]
+resource_name = "hover_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.35, 0.5),
+"update": 0,
+"values": [Vector2(1669, 817), Vector2(1601, 817)]
+}
+
+[sub_resource type="Animation" id="Animation_ehwcr"]
+resource_name = "hover_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.35, 0.5),
+"update": 0,
+"values": [Vector2(1601, 817), Vector2(1667, 817)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3kfr0"]
+_data = {
+&"RESET": SubResource("Animation_lfwrr"),
+&"hover_in": SubResource("Animation_jgy8v"),
+&"hover_out": SubResource("Animation_ehwcr")
+}
+
+[sub_resource type="Animation" id="Animation_t2ne6"]
+resource_name = "In"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Top Layar/Black fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0.43090063, 0.43527573),
 "update": 0,
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../Center Layar/Play:position")
+tracks/1/path = NodePath("Top Layar/Black fade:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 2.0333333),
-"transitions": PackedFloat32Array(0.35, 0.34151003),
-"update": 0,
-"values": [Vector2(1921, 470), Vector2(1667, 470)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../Center Layar/Settings:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 2.0333333),
-"transitions": PackedFloat32Array(0.48296815, 0.36602136),
-"update": 0,
-"values": [Vector2(1921, 639), Vector2(1667, 639)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../Center Layar/Quit:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 2.0333333),
-"transitions": PackedFloat32Array(0.59460354, 1),
-"update": 0,
-"values": [Vector2(1916, 817), Vector2(1669, 817)]
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
 }
 
 [sub_resource type="Animation" id="Animation_3kfr0"]
@@ -74,74 +230,26 @@ length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Black fade:color")
+tracks/0/path = NodePath("Top Layar/Black fade:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Top Layar/Black fade:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(0.35, 0.5),
+"transitions": PackedFloat32Array(0.46651652, 0.6372804),
 "update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_racw3"]
-resource_name = "Play_animation_in"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Center Layar/Play:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(0.35, 0.5),
-"update": 0,
-"values": [Vector2(1667, 470), Vector2(1602, 470)]
-}
-
-[sub_resource type="Animation" id="Animation_k0dnv"]
-resource_name = "Play_animation_out"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Center Layar/Play:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(0.35, 0.5),
-"update": 0,
-"values": [Vector2(1602, 470), Vector2(1666, 470)]
-}
-
-[sub_resource type="Animation" id="Animation_upxag"]
-resource_name = "Quit_animation_in"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Center Layar/Quit:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(0.35, 0.5),
-"update": 0,
-"values": [Vector2(1669, 817), Vector2(1602, 817)]
-}
-
-[sub_resource type="Animation" id="Animation_bq07x"]
-resource_name = "Quit_animation_out"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Center Layar/Quit:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(0.35, 0.5),
-"update": 0,
-"values": [Vector2(1602, 817), Vector2(1664, 817)]
+"values": [Color(0, 0, 0, 0.08627451), Color(0, 0, 0, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_yorvf"]
@@ -149,7 +257,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Black fade:color")
+tracks/0/path = NodePath("Top Layar/Black fade:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -161,82 +269,31 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../Center Layar/Play:position")
+tracks/1/path = NodePath("Top Layar/Black fade:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1667, 470)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../Center Layar/Settings:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1667, 639)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../Center Layar/Quit:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1916, 817)]
-}
-
-[sub_resource type="Animation" id="Animation_dr128"]
-resource_name = "Setings_animation_in"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Center Layar/Settings:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(0.35, 0.5),
-"update": 0,
-"values": [Vector2(1667, 639), Vector2(1600, 639)]
-}
-
-[sub_resource type="Animation" id="Animation_jgy8v"]
-resource_name = "Settings_animation_out"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Center Layar/Settings:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(0.35, 0.5),
-"update": 0,
-"values": [Vector2(1600, 639), Vector2(1667, 639)]
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k0dnv"]
 _data = {
 &"In": SubResource("Animation_t2ne6"),
 &"Out": SubResource("Animation_3kfr0"),
-&"Play_animation_in": SubResource("Animation_racw3"),
-&"Play_animation_out": SubResource("Animation_k0dnv"),
-&"Quit_animation_in": SubResource("Animation_upxag"),
-&"Quit_animation_out": SubResource("Animation_bq07x"),
-&"RESET": SubResource("Animation_yorvf"),
-&"Setings_animation_in": SubResource("Animation_dr128"),
-&"Settings_animation_out": SubResource("Animation_jgy8v")
+&"RESET": SubResource("Animation_yorvf")
 }
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_racw3"]
+shader = ExtResource("5_c2med")
+shader_parameter/smoke_color = Color(0.8, 0.8, 0.8, 1)
+shader_parameter/speed = 0.05
+shader_parameter/scale = 4.0
+shader_parameter/density = 0.5
+
+[sub_resource type="QuadMesh" id="QuadMesh_k0dnv"]
 
 [node name="MainMenu" type="Node2D" unique_id=1868828962]
 script = ExtResource("1_racw3")
@@ -263,57 +320,51 @@ vertical_alignment = 1
 [node name="Play" type="Button" parent="Center Layar" unique_id=1025987328]
 offset_left = 1667.0
 offset_top = 470.0
-offset_right = 1918.9979
+offset_right = 1918.999
 offset_bottom = 575.0
 theme = ExtResource("4_c2med")
 theme_override_fonts/font = ExtResource("3_trv5n")
 theme_override_font_sizes/font_size = 50
 text = "Play"
+script = ExtResource("6_t2ne6")
 
-[node name="Label" type="Label" parent="Center Layar/Play" unique_id=1449545157]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.8375
-anchor_top = 0.44444445
-anchor_right = 0.8625
-anchor_bottom = 0.51203704
-offset_left = -270.04712
-offset_top = -36.666668
-offset_right = -246.34706
-offset_bottom = 29.23611
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 6
-theme = ExtResource("4_c2med")
-theme_override_font_sizes/font_size = 53
-text = ">"
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Center Layar/Play" unique_id=643083486]
+libraries/ = SubResource("AnimationLibrary_jgy8v")
 
 [node name="Settings" type="Button" parent="Center Layar" unique_id=738847386]
 offset_left = 1667.0
 offset_top = 639.0
-offset_right = 1918.9988
+offset_right = 1918.9976
 offset_bottom = 743.0
 theme = ExtResource("4_c2med")
 theme_override_fonts/font = ExtResource("3_trv5n")
 theme_override_font_sizes/font_size = 50
 text = "Settings"
+script = ExtResource("6_t2ne6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Center Layar/Settings" unique_id=1007597686]
+libraries/ = SubResource("AnimationLibrary_lfwrr")
 
 [node name="Quit" type="Button" parent="Center Layar" unique_id=2043582001]
-offset_left = 1916.0
+offset_left = 1669.0
 offset_top = 817.0
-offset_right = 2168.001
+offset_right = 1921.0005
 offset_bottom = 921.0
-theme = ExtResource("4_c2med")
+theme = SubResource("Theme_t2ne6")
 theme_override_fonts/font = ExtResource("3_trv5n")
 theme_override_font_sizes/font_size = 50
 text = "Quit"
+script = ExtResource("6_t2ne6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Center Layar/Quit" unique_id=1415699675]
+libraries/ = SubResource("AnimationLibrary_3kfr0")
 
 [node name="Top Layar" type="CanvasLayer" parent="." unique_id=441007220]
 layer = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Top Layar" unique_id=1684676923]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_k0dnv")
 
 [node name="Smoke" type="MeshInstance2D" parent="Top Layar" unique_id=556143214]
 material = SubResource("ShaderMaterial_racw3")
@@ -321,23 +372,13 @@ position = Vector2(962.0759, 538.4102)
 rotation = -1.5707964
 scale = Vector2(1080.2909, 1925.5588)
 mesh = SubResource("QuadMesh_k0dnv")
-metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Top Layar" unique_id=1684676923]
-libraries/ = SubResource("AnimationLibrary_k0dnv")
 
 [node name="Black fade" type="ColorRect" parent="Top Layar" unique_id=1199516207]
 offset_right = 1928.0
 offset_bottom = 1088.0
 color = Color(0, 0, 0, 1)
 
-[connection signal="mouse_entered" from="Center Layar/Play" to="." method="_on_play_mouse_entered"]
-[connection signal="mouse_exited" from="Center Layar/Play" to="." method="_on_play_mouse_exited"]
 [connection signal="pressed" from="Center Layar/Play" to="." method="_on_play_pressed"]
-[connection signal="mouse_entered" from="Center Layar/Settings" to="." method="_on_settings_mouse_entered"]
-[connection signal="mouse_exited" from="Center Layar/Settings" to="." method="_on_settings_mouse_exited"]
 [connection signal="pressed" from="Center Layar/Settings" to="." method="_on_settings_pressed"]
-[connection signal="mouse_entered" from="Center Layar/Quit" to="." method="_on_quit_mouse_entered"]
-[connection signal="mouse_exited" from="Center Layar/Quit" to="." method="_on_quit_mouse_exited"]
 [connection signal="pressed" from="Center Layar/Quit" to="." method="_on_quit_pressed"]
