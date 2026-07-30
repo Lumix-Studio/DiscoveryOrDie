@@ -32,3 +32,35 @@ Para acoplar esse sistema em vários botões, você preciza cunprir alkguns requ
 Caso não queira que funcione para todos os botões, use os sinais.
 
 * 2: Para animações: Caso o seu sistema utilize animações para todos os botões, faça uma animação para todos os "AnimationPlayar" que estão como filhos dos botões. 
+
+### Na pratica
+
+Na pratca, para inplementar algo para 1 ou mais botões (animações por exenplo) você:
+
+1: Adicione um AnimationPlayar (como filho) para cada botão;
+
+2: Adicione duas animações com o nome de "hove_in" "hover_out" (Como exenplo) para todos os AnimationPlayar (OBS: não preciza ser exatamente a mesma animação, mas preciza ter o mesmo nome)
+
+3: Conecte os eventos com:
+
+```
+func _ready():
+	mouse_entered.connect(_on_mouse_entered)
+	mouse_exited.connect(_on_mouse_exited)
+```
+
+Depois
+
+func _on_mouse_entered():
+	anim.play("hover_in")
+func _on_mouse_exited():
+	anim.play("hover_out")
+```
+
+Caso queira por outras animações, mude o nome da animação e a animação em si.
+
+#### Se for adicionar apenas uma ou mais animações para apenas um botão
+
+Utilize sinais do pórprio botão
+
+> Pronto. Agora você entendeu como o sistema funciona 
