@@ -10,11 +10,21 @@ quebrado. Você **conserta** — não só reporta.
 GODOT="/Applications/Godot.app/Contents/MacOS/Godot"
 
 # 1. reimporta recursos (necessário após mover/criar arquivos)
-"$GODOT" --headless --import --path .
+gate-fila "$GODOT" --headless --import --path .
 
 # 2. suíte completa: smoke de integração + validação do padrão Lumix
-"$GODOT" --headless --path . res://test/test_suite.tscn ; echo "exit=$?"
+gate-fila "$GODOT" --headless --path . res://test/test_suite.tscn ; echo "exit=$?"
 ```
+
+> **🚦 O gate pesado passa pela fila da máquina (`gate-fila`).** Várias sessões do Claude rodam ao
+> mesmo tempo, em worktrees e repos diferentes (`~/Remark` + `~/Pessoal`), e um gate satura os 10
+> núcleos desta máquina sozinho: sem teto o load vai a dezenas, o SO entra em swap e teste com
+> timeout (Chrome headless, Godot headless, pa11y) fica **vermelho por contenção**, não por bug.
+> `gate-fila <comando>` espera uma das 2 vagas, roda e libera; comando barato (`lint`, `tsc`,
+> `--check-only` de um arquivo) não precisa. `🎫 fila` / `⏳ vagas ocupadas` é ESPERADO — **não
+> mate o processo**, a vaga é sua assim que vagar (vaga de dono morto se recupera sozinha).
+> `gate-fila status` mostra quem está segurando a máquina. Fonte:
+> `~/Pessoal/claude-code-profiles/bin/gate-fila`; a regra inteira em `~/CLAUDE.md`.
 
 `exit=0` → verde. `exit≠0` → há falha (a saída lista cada `✗ FAIL:`).
 
